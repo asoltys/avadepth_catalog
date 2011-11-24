@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CARISDictionary Version="1">
+  <AttributeClasses>
+    <AttributeClass Acronym="AGENCY" ID="1" Type="ALPHANUMERIC">
+      <Name>Agency responsible for production</Name>
+      <Description>This attribute identifies the agency which produced the data.</Description>
+      <References>INT 1: not specified; M-4: not specified;</References>
+      <Remarks>Indication: The agency is encoded by a two character code derived from ISO3166 (refer to S-57 Appendix A Annex A). Format: c2 (mandatory) No remarks.</Remarks>
+    </AttributeClass>
+    <AttributeClass Acronym="CATZOC" ID="72" Type="ENUMERATION">
+      <Name>Category of zone of confidence in data</Name>
+      <Description/>
+      <References/>
+      <Remarks/>
+      <ExpectedValues>
+        <ExpectedValue Value="1" Description="zone of confidence A1"/>
+        <ExpectedValue Value="2" Description="zone of confidence A2"/>
+        <ExpectedValue Value="3" Description="zone of confidence B"/>
+        <ExpectedValue Value="4" Description="zone of confidence C"/>
+        <ExpectedValue Value="5" Description="zone of confidence D"/>
+        <ExpectedValue Value="6" Description="zone of confidence U (data not assessed)"/>
+      </ExpectedValues>
+    </AttributeClass>
+    <AttributeClass Acronym="CPDATE" ID="79" Type="ALPHANUMERIC">
+      <Name>Compilation date</Name>
+      <Description>The date on which the compilation of the data was completed.</Description>
+      <References/>
+      <Remarks>No remarks    Indication: The compilation date should be encoded using 4 digits for the calendar year (CCYY), 2 digits for the month (MM) (eg April=04) and 2 digits for the day (DD), according to ISO 8601: 1988.  Example: 19871021for 21 October 1987 as compilation date.</Remarks>
+      <DisplayFormat>CCYYMMDD or CCYYMM or CCYY</DisplayFormat>
+    </AttributeClass>
+    <AttributeClass Acronym="CSCALE" ID="80" Type="INTEGER">
+      <Name>Compilation scale</Name>
+      <Description>The scale at which the data was originally compiled.</Description>
+      <References/>
+      <Remarks>This attribute defines the scale at which the data was   originally compiled. For example, the scale of the paper   chart that was used for the ENC compilation. This attribute   is only used in conjunction with the meta-object   'Compilation Scale of data' (M_CSCL) which is used to define   polygons of equal compilation scale. CSCALE should therefore   not be confused with the attributes SCAMIN and SCAMAX.   Indication: The modulus of the scale is indicated, that is 1:75000 is encoded as 75000.  Unit:none Resolution:1  Example: 75000for a scale of 1:75000</Remarks>
+      <DisplayFormat>xxxxxxxx</DisplayFormat>
+    </AttributeClass>
+    <AttributeClass Acronym="DRVAL1" ID="87" Type="FLOAT" UnitType="Depth" Units="m" DatumType="Sounding">
+      <Name>Depth range value 1</Name>
+      <Description>The minimum (shoalest) value of a depth range.</Description>
+      <References>INT 1: II 21; IM 6; M-4: 414; 432.4; 434.3-4;</References>
+      <Remarks>The attribute 'depth range value 1' encodes the minimum   value of a depth range e.g. of a depth area. Where the area   dries the value is negative.   Indication: Unit:defined in the DUNI subfield of the DSPM record or in the DUNITS attribute of the M_UNIT meta object class, e.g. metre (m) Resolution:0.1m or 0.1fm or 0.1ft  Example: 50for a minimum depth of 50 metres</Remarks>
+      <DisplayFormat>#####.#</DisplayFormat>
+    </AttributeClass>
+    <AttributeClass Acronym="DRVAL2" ID="88" Type="FLOAT" UnitType="Depth" Units="m" DatumType="Sounding">
+      <Name>Depth range value 2</Name>
+      <Description>The maximum (deepest) value of a depth range.</Description>
+      <References>INT 1: II 21; IM 6; M-4: 414; 432.4; 434.3-4;</References>
+      <Remarks>The attribute 'depth range value 2' encodes the maximum   value of a depth range e.g. of a depth area. Where the area   dries the value is negative.   Indication: Unit:defined in the DUNI subfield of the DSPM record or in the DUNITS attribute of the M_UNIT meta object class, e.g. metre (m) Resolution:0.1m or 0.1fm or 0.1ft  Example: 100for a maximum depth of 100 metres</Remarks>
+      <DisplayFormat>#####.#</DisplayFormat>
+    </AttributeClass>
+    <AttributeClass Acronym="DUNITS" ID="89" Type="ENUMERATION">
+      <Name>Depth units</Name>
+      <Description/>
+      <References/>
+      <Remarks>The attribute encodes the units of measurement for depths.</Remarks>
+      <ExpectedValues>
+        <ExpectedValue Value="1" Description="metres"/>
+        <ExpectedValue Value="2" Description="fathoms and feet"/>
+        <ExpectedValue Value="3" Description="feet"/>
+        <ExpectedValue Value="4" Description="fathoms and fractions"/>
+        <ExpectedValue Value="501" Description="fathoms"/>
+        <ExpectedValue Value="701" Description="Unknown"/>
+        <ExpectedValue Value="703" Description="Not Applicable"/>
+        <ExpectedValue Value="704" Description="Other"/>
+      </ExpectedValues>
+    </AttributeClass>
+    <AttributeClass Acronym="HUNITS" ID="96" Type="ENUMERATION">
+      <Name>Height/length units</Name>
+      <Description/>
+      <References/>
+      <Remarks>This attribute encodes the units of measurement for height   and length, i.e. it is used to depth for which the units   are, specified by the attribute DUNITS.</Remarks>
+      <ExpectedValues>
+        <ExpectedValue Value="1" Description="metres"/>
+        <ExpectedValue Value="2" Description="feet"/>
+        <ExpectedValue Value="501" Description="international nautical mile"/>
+        <ExpectedValue Value="502" Description="cable"/>
+        <ExpectedValue Value="503" Description="yard"/>
+        <ExpectedValue Value="701" Description="Unknown"/>
+        <ExpectedValue Value="703" Description="Not Applicable"/>
+        <ExpectedValue Value="704" Description="Other"/>
+      </ExpectedValues>
+    </AttributeClass>
+    <AttributeClass Acronym="INFORM" ID="102" Type="STRING">
+      <Name>Information</Name>
+      <Description>Textual information about the object.</Description>
+      <References>INT 1: IA 16; M-4: 242.3-5;</References>
+      <Remarks>The attribute 'information' holds any textual information   about the object.       The textual information could be e.g. a list, a table or a   text. This attribute-class supports the use of an   information system. A user of an ECDIS can call up this   information for further details about a certain object.       This attribute should be used, for example, to hold the   information that is shown on paper charts by cautionary and   explanatory notes.</Remarks>
+      <DisplayFormat>Text-ID (max. 80 char.)</DisplayFormat>
+    </AttributeClass>
+    <AttributeClass Acronym="OBJNAM" ID="116" Type="STRING">
+      <Name>Object name</Name>
+      <Description>The individual name of an object.</Description>
+      <References>INT 1: ID 7; IF 19; IN 12.2-3; M-4: 371; 323.1-2; 431.2-3; 431.5;</References>
+      <Remarks>No remarks.</Remarks>
+      <DisplayFormat>NAME (max. 80 char.)</DisplayFormat>
+    </AttributeClass>
+    <AttributeClass Acronym="PICREP" ID="120" Type="RASTER">
+      <Name>Pictorial representation</Name>
+      <Description>Indicates whether a pictorial representation of the object is available.</Description>
+      <References>INT 1: IE 3.1-2; M-4: 456.5; 457.3;</References>
+      <Remarks>The attribute 'pictorial representation' indicates whether a   pictorial representation of the object is available.       The 'pictorial representation' could be a drawing or a   photo. This attribute supports the use of an   information-system. A user of an ECDIS can call up this   'pictorial presentation' to get more information of a   particular object, i.e. a beacon, a coastline.</Remarks>
+      <DisplayFormat>tif</DisplayFormat>
+    </AttributeClass>
+    <AttributeClass Acronym="RECDAT" ID="128" Type="DATE">
+      <Name>Recording date</Name>
+      <Description>The date when the specific object or cartographic primitive was captured, edited or deleted.</Description>
+      <References>INT 1: II 22; M-4: 414.1;</References>
+      <Remarks>The attribute 'recording date' indicates the date when the   specific object or cartographic primitive was captured,   edited or deleted.    Indication: The recording date should be encoded using 4 digits for the calendar year (CCYY), 2 digits for the month (MM) (eg. April=04) and 2 digits for the day (DD), according to ISO 8601: 1988.  Example: 19930112for 12 January 1993 as recording date</Remarks>
+      <DisplayFormat>CCYYMMDD (mandatory)</DisplayFormat>
+    </AttributeClass>
+    <AttributeClass Acronym="RECIND" ID="129" Type="ALPHANUMERIC">
+      <Name>Recording indication</Name>
+      <Description>The procedure for the encoding and entering of data.</Description>
+      <References/>
+      <Remarks>The attribute 'recording indication' encodes the procedure   of encoding and the entering of data.    Indication: country (c2):two letter code according to ISO 3166 (refer to Annex A to S-57 Appendix A)  authority (c2):A string of two alphanumeric characters (refer to Annex A to S-57 Appendix A), e.g. German Bundesamt fur Seeschiffahrt und Hydrographie = DE; US National Imagery and Mapping Agency = U1.  procedure (c4):digitized= digi scanned= scan alpha/numeric input= alph  Example: DK,D1,digi</Remarks>
+      <DisplayFormat>c2,c2,c4 (mandatory)</DisplayFormat>
+    </AttributeClass>
+    <AttributeClass Acronym="SOUACC" ID="144" Type="FLOAT" UnitType="Depth" Units="m">
+      <Name>Sounding accuracy</Name>
+      <Description/>
+      <References/>
+      <Remarks>No remarks  Indication: Unit:defined in the DUNI subfield of the DSPM record or in the DUNITS attribute of the M_UNIT meta object class, e.g. metre (m) Resolution:0.1m or 0.1fm or 0.1ft  Example: 0.3for a maximum error of 0.3 metre</Remarks>
+      <DisplayFormat>##.#</DisplayFormat>
+    </AttributeClass>
+    <AttributeClass Acronym="SDISMX" ID="145" Type="INTEGER" UnitType="Height" Units="m">
+      <Name>Sounding distance - maximum</Name>
+      <Description>The maximum spacing of the principal sounding lines of a survey.</Description>
+      <References/>
+      <Remarks>The attribute 'sounding distance - maximum' encodes the   maximum spacing of the principal sounding lines.   Indication: Unit:defined in the HUNI subfield of the DSPM record or in the HUNITS attribute of the M_UNIT meta object class, e.g. metre (m) Resolution:1m or 1ft  Example: 150for a maximum spacing of 150 metres</Remarks>
+      <DisplayFormat>xxxx</DisplayFormat>
+    </AttributeClass>
+    <AttributeClass Acronym="SDISMN" ID="146" Type="INTEGER" UnitType="Height" Units="m">
+      <Name>Sounding distance - minimum</Name>
+      <Description>The minimum spacing of the principal sounding lines of a survey.</Description>
+      <References/>
+      <Remarks>The attribute 'sounding distance - minimum' encodes the   minimum spacing of the principal sounding lines.   Indication: Unit:defined in the HUNI subfield of the DSPM record or in the HUNITS attribute of the M_UNIT meta object class, e.g. metre (m) Resolution:1m or 1ft  Example: 50for a minimum spacing of 50 metres</Remarks>
+      <DisplayFormat>xxxx</DisplayFormat>
+    </AttributeClass>
+    <AttributeClass Acronym="SORDAT" ID="147" Type="ALPHANUMERIC">
+      <Name>Source date</Name>
+      <Description>The production date of the source, e.g. the date of measurement.</Description>
+      <References/>
+      <Remarks>The attribute 'source date' indicates the production date of the source, eg. the date of measurement.   Indication: The source date should be encoded using 4 digits for the calendar year (CCYY), 2 digits for the month (MM) (eg. April=04) and 2 digits for the day (DD), according to ISO 8601: 1988.  Example: 19820506for 6 May 1982 as source date.</Remarks>
+      <DisplayFormat>CCYYMMDD or CCYYMM or CCYY</DisplayFormat>
+    </AttributeClass>
+    <AttributeClass Acronym="SORIND" ID="148" Type="ALPHANUMERIC">
+      <Name>Source indication</Name>
+      <Description>Information about the source of the object.</Description>
+      <References/>
+      <Remarks>The attribute 'source indication' encodes information about   the source of the object.    Indication: Country (c2): (mandatory) two letter code from ISO 3166 (Annex A of S-57 Appendix A)  Authority (c2): (mandatory) a string of two alphanumeric characters (Annex A of S-57 Appendix A)  Source (c5):Graphice.g. plotting sheet, paper chart = graph Report e.g. wreck report = reprt  ID-Code (c...):e.g. Code of paper chart  Example: DK,D1,graph,chart196</Remarks>
+      <DisplayFormat>c2,c2,c5,c...</DisplayFormat>
+    </AttributeClass>
+    <AttributeClass Acronym="STATUS" ID="149" Type="LIST">
+      <Name>Status</Name>
+      <Description/>
+      <References>INT 1: IP 50; IN 10; IL 14, 44; IC 21; IQ 71; IN 12.9; IP 54; IQ 70; M-4: 473.2; 431.1; 444.7; 353.3; 460.5;</References>
+      <Remarks>The attribute 'status' encodes the specific kind of use.</Remarks>
+      <ExpectedValues>
+        <ExpectedValue Value="1" Description="permanent"/>
+        <ExpectedValue Value="2" Description="occasional"/>
+        <ExpectedValue Value="3" Description="recommended"/>
+        <ExpectedValue Value="4" Description="disused"/>
+        <ExpectedValue Value="5" Description="periodic/intermittent"/>
+        <ExpectedValue Value="6" Description="reserved"/>
+        <ExpectedValue Value="7" Description="temporary"/>
+        <ExpectedValue Value="8" Description="private"/>
+        <ExpectedValue Value="9" Description="mandatory"/>
+        <ExpectedValue Value="10" Description="{destroyed/ruined}"/>
+        <ExpectedValue Value="11" Description="extinguished"/>
+        <ExpectedValue Value="12" Description="illuminated"/>
+        <ExpectedValue Value="13" Description="historic"/>
+        <ExpectedValue Value="14" Description="public"/>
+        <ExpectedValue Value="15" Description="synchronized"/>
+        <ExpectedValue Value="16" Description="watched"/>
+        <ExpectedValue Value="17" Description="un-watched"/>
+        <ExpectedValue Value="18" Description="existence doubtful"/>
+        <ExpectedValue Value="501" Description="active/in use"/>
+        <ExpectedValue Value="502" Description="claimed"/>
+        <ExpectedValue Value="503" Description="practice and/or exercise purposes"/>
+        <ExpectedValue Value="504" Description="recognised"/>
+        <ExpectedValue Value="505" Description="dead"/>
+        <ExpectedValue Value="506" Description="lifted"/>
+        <ExpectedValue Value="507" Description="mass grave"/>
+        <ExpectedValue Value="508" Description="exploration"/>
+        <ExpectedValue Value="509" Description="production"/>
+        <ExpectedValue Value="510" Description="suspended"/>
+        <ExpectedValue Value="511" Description="injection"/>
+        <ExpectedValue Value="512" Description="unspecified"/>
+        <ExpectedValue Value="513" Description="disputed"/>
+        <ExpectedValue Value="514" Description="designated"/>
+        <ExpectedValue Value="515" Description="on request"/>
+        <ExpectedValue Value="516" Description="dormant"/>
+        <ExpectedValue Value="517" Description="proposed"/>
+        <ExpectedValue Value="518" Description="abandoned"/>
+        <ExpectedValue Value="519" Description="grey zone"/>
+        <ExpectedValue Value="520" Description="indeterminate"/>
+        <ExpectedValue Value="521" Description="multilateral"/>
+        <ExpectedValue Value="522" Description="rules for transit passage apply"/>
+        <ExpectedValue Value="523" Description="voluntary"/>
+        <ExpectedValue Value="701" Description="Unknown"/>
+        <ExpectedValue Value="702" Description="Multiple"/>
+        <ExpectedValue Value="703" Description="Not Applicable"/>
+        <ExpectedValue Value="704" Description="Other"/>
+      </ExpectedValues>
+    </AttributeClass>
+    <AttributeClass Acronym="SURATH" ID="150" Type="STRING">
+      <Name>Survey authority</Name>
+      <Description>The authority which was responsible for the survey.</Description>
+      <References/>
+      <Remarks>The attribute 'survey authority' encodes the name of the source survey authority.</Remarks>
+      <DisplayFormat>NAME (max. 80 char.)</DisplayFormat>
+    </AttributeClass>
+    <AttributeClass Acronym="SUREND" ID="151" Type="ALPHANUMERIC">
+      <Name>Survey date - end</Name>
+      <Description>The end date of the survey.</Description>
+      <References/>
+      <Remarks>The attribute 'survey date - end' indicates the end date of   the survey.   Indication: The 'survey date, end' should be encoded using 4 digits for the  calendar year (CCYY), 2 digits for the month (MM) (eg April=04) and 2 digits for the day (DD). When no specific month and/or day is required/known, indication of the month and/or the day omitted. This conforms to ISO 8601: 1988.  Example: 19781127for a survey ending on 27 November 1978</Remarks>
+      <DisplayFormat>CCYYMMDD or CCYYMM or CCYY</DisplayFormat>
+    </AttributeClass>
+    <AttributeClass Acronym="SURSTA" ID="152" Type="ALPHANUMERIC">
+      <Name>Survey date - start</Name>
+      <Description>The start date of the survey.</Description>
+      <References/>
+      <Remarks>The attribute 'survey date - start' indicates the start date of   the survey.   Indication: The 'survey date, start' should be encoded using 4 digits for the  calendar year (CCYY), 2 digits for the month (MM) (eg April=04) and 2 digits for the day (DD). When no specific month and/or day is required/known, indication of the month and/or the day omitted. This conforms to ISO 8601: 1988.  Example: 198403for a survey starting in March 1984</Remarks>
+      <DisplayFormat>CCYYMMDD or CCYYMM or CCYY</DisplayFormat>
+    </AttributeClass>
+    <AttributeClass Acronym="SURTYP" ID="153" Type="LIST">
+      <Name>Survey type</Name>
+      <Description/>
+      <References/>
+      <Remarks>The attribute 'survey type' encodes the type of survey   conducted.</Remarks>
+      <ExpectedValues>
+        <ExpectedValue Value="1" Description="reconnaissance/sketch survey"/>
+        <ExpectedValue Value="2" Description="controlled survey"/>
+        <ExpectedValue Value="3" Description="{unsurveyed}"/>
+        <ExpectedValue Value="4" Description="examination survey"/>
+        <ExpectedValue Value="5" Description="passage survey"/>
+        <ExpectedValue Value="6" Description="remotely sensed"/>
+        <ExpectedValue Value="701" Description="Unknown"/>
+        <ExpectedValue Value="703" Description="Not Applicable"/>
+        <ExpectedValue Value="704" Description="Other"/>
+      </ExpectedValues>
+    </AttributeClass>
+    <AttributeClass Acronym="TECSOU" ID="156" Type="LIST">
+      <Name>Technique of sounding measurement</Name>
+      <Description/>
+      <References>INT 1: II 24; IK 2, 27, 42; M-4: 415; 415.1-2; 422.3-4; 422.9;</References>
+      <Remarks>The attribute 'technique of sounding measurement' encodes   the various techniques and methods of sounding measurement.</Remarks>
+      <ExpectedValues>
+        <ExpectedValue Value="1" Description="found by echo-sounder"/>
+        <ExpectedValue Value="2" Description="found by side scan sonar"/>
+        <ExpectedValue Value="3" Description="found by multi-beam"/>
+        <ExpectedValue Value="4" Description="found by diver"/>
+        <ExpectedValue Value="5" Description="found by lead-line"/>
+        <ExpectedValue Value="6" Description="swept by wire-drag"/>
+        <ExpectedValue Value="7" Description="found by laser"/>
+        <ExpectedValue Value="8" Description="swept by vertical acoustic system"/>
+        <ExpectedValue Value="9" Description="found by electromagnetic sensor"/>
+        <ExpectedValue Value="10" Description="photogrammetry"/>
+        <ExpectedValue Value="11" Description="satellite imagery"/>
+        <ExpectedValue Value="12" Description="found by levelling"/>
+        <ExpectedValue Value="13" Description="swept by side-scan-sonar"/>
+        <ExpectedValue Value="14" Description="computer generated"/>
+        <ExpectedValue Value="701" Description="Unknown"/>
+        <ExpectedValue Value="703" Description="Not Applicable"/>
+        <ExpectedValue Value="704" Description="Other"/>
+      </ExpectedValues>
+    </AttributeClass>
+    <AttributeClass Acronym="VERDAT" ID="185" Type="ENUMERATION">
+      <Name>Vertical datum</Name>
+      <Description/>
+      <References/>
+      <Remarks>The attribute is used to specify the datum to which both   elevations (vertical datum in DX90, see Part B of this   Standard) and soundings (sounding datum in DX90, see Part B   of this Standard) are referred.       The vertical datum and sounding datum for a complete   exchange set are encoded in the Data Set Parameter Module of   DX90 (see Part B of this Standard).       The attribute 'vertical datum' should only be used when the   value relating to a particular object differs from the value   contained in the Data Set Parameter Module.</Remarks>
+      <ExpectedValues>
+        <ExpectedValue Value="0" Description="Vertical Datum is not applicable"/>
+        <ExpectedValue Value="1" Description="Mean Low Water Springs"/>
+        <ExpectedValue Value="2" Description="Mean Lower Low Water Springs"/>
+        <ExpectedValue Value="3" Description="Mean Sea Level"/>
+        <ExpectedValue Value="4" Description="Lowest Low Water"/>
+        <ExpectedValue Value="5" Description="Mean Low Water"/>
+        <ExpectedValue Value="6" Description="Lowest Low Water Springs"/>
+        <ExpectedValue Value="7" Description="Approximate Mean Low Water Springs"/>
+        <ExpectedValue Value="8" Description="Indian Spring Low Water"/>
+        <ExpectedValue Value="9" Description="Low Water Springs"/>
+        <ExpectedValue Value="10" Description="Approximate Lowest Astronomical Tide"/>
+        <ExpectedValue Value="11" Description="Nearly Lowest Low Water"/>
+        <ExpectedValue Value="12" Description="Mean Lower Low Water"/>
+        <ExpectedValue Value="13" Description="Low Water"/>
+        <ExpectedValue Value="14" Description="Approximate Mean Low Water"/>
+        <ExpectedValue Value="15" Description="Approximate Mean Lower Low Water"/>
+        <ExpectedValue Value="16" Description="Mean High Water"/>
+        <ExpectedValue Value="17" Description="Mean High Water Springs"/>
+        <ExpectedValue Value="18" Description="High Water"/>
+        <ExpectedValue Value="19" Description="Approximate Mean Sea Level"/>
+        <ExpectedValue Value="20" Description="High Water Springs"/>
+        <ExpectedValue Value="21" Description="Mean Higher High Water"/>
+        <ExpectedValue Value="22" Description="Equinoctial Spring Low Water"/>
+        <ExpectedValue Value="23" Description="Lowest Astronomical Tide"/>
+        <ExpectedValue Value="24" Description="Local Datum"/>
+        <ExpectedValue Value="25" Description="International Great Lakes Datum 1985"/>
+        <ExpectedValue Value="26" Description="Mean Water Level"/>
+        <ExpectedValue Value="27" Description="Lower Low Water Large Tide"/>
+        <ExpectedValue Value="28" Description="Higher High Water Large Tide"/>
+        <ExpectedValue Value="29" Description="Nearly Highest High Water"/>
+        <ExpectedValue Value="30" Description="Highest Astronomical Tide (HAT)"/>
+        <ExpectedValue Value="255" Description="Vertical Datum does not apply"/>
+        <ExpectedValue Value="501" Description="Mean Tide Level"/>
+        <ExpectedValue Value="701" Description="Unknown"/>
+        <ExpectedValue Value="703" Description="Not Applicable"/>
+        <ExpectedValue Value="704" Description="Other"/>
+      </ExpectedValues>
+    </AttributeClass>
+    <AttributeClass Acronym="NINFOM" ID="300" Type="STRING">
+      <Name>Information in national language</Name>
+      <Description/>
+      <References>INT 1: IA 16; M-4: 242.3-5;</References>
+      <Remarks>The attribute 'information in national character set'   encodes any textual information about the object using a   specified national language character set.       The textual information could be e.g. a list, a table or a   text. This attribute is intended to support the use of an   information system. A user of an ECDIS can call up this   information for further details about a certain object.       This attribute should be used, for example, to hold the   information that is shown on paper charts by cautionary and   explanatory notes.</Remarks>
+      <DisplayFormat>NAME (max. 80 char.)</DisplayFormat>
+    </AttributeClass>
+    <AttributeClass Acronym="HORDAT" ID="400" Type="ENUMERATION">
+      <Name>Horizontal datum</Name>
+      <Description/>
+      <References>INT 1: IS 50; M-4: not specified;</References>
+      <Remarks>All necessary informationfor conversion of geographic   coordinates from most of the Geodetic Datums in the above   list to WGS-84 is contained in the 'User's Handbook on Datum   Transformations involving WGS-84', prepared by the US   defense Mapping Agency and which is available from the   IHB as IHO Publication S-60 (English and French Versions),   along with an associated standard datum transformation   software on flopy disk called 'MADTRAN'. The resulting   latitude and longitude offset can be encoded in the   attribute SHIPAM.</Remarks>
+      <ExpectedValues>
+        <ExpectedValue Value="1" Description="WGS 72"/>
+        <ExpectedValue Value="2" Description="WGS 84"/>
+        <ExpectedValue Value="3" Description="European 1950 (European Datum)"/>
+        <ExpectedValue Value="4" Description="Potsdam datum"/>
+        <ExpectedValue Value="5" Description="Adindan"/>
+        <ExpectedValue Value="6" Description="Afgooye"/>
+        <ExpectedValue Value="7" Description="Ain el Abd 1970"/>
+        <ExpectedValue Value="8" Description="Anna 1 Astro 1965"/>
+        <ExpectedValue Value="9" Description="Antigua Island Astro 1943"/>
+        <ExpectedValue Value="10" Description="Arc 1950"/>
+        <ExpectedValue Value="11" Description="Arc 1960"/>
+        <ExpectedValue Value="12" Description="Ascension Island 1958"/>
+        <ExpectedValue Value="13" Description="Astro beacon `E` 1945"/>
+        <ExpectedValue Value="14" Description="Astro DOS 71/4"/>
+        <ExpectedValue Value="15" Description="Astro Tern Island FERIG) 1961"/>
+        <ExpectedValue Value="16" Description="Astronomical Station 1952"/>
+        <ExpectedValue Value="17" Description="Australian Geodetic 1966"/>
+        <ExpectedValue Value="18" Description="Australian Geodetic 1984"/>
+        <ExpectedValue Value="19" Description="Ayabelle Lighthouse"/>
+        <ExpectedValue Value="20" Description="Bellevue (IGN)"/>
+        <ExpectedValue Value="21" Description="Bermuda 1957"/>
+        <ExpectedValue Value="22" Description="Bissau"/>
+        <ExpectedValue Value="23" Description="Bogota Observatory"/>
+        <ExpectedValue Value="24" Description="Bukit Rimpah"/>
+        <ExpectedValue Value="25" Description="Camp Area Astro"/>
+        <ExpectedValue Value="26" Description="Campo Inchauspe"/>
+        <ExpectedValue Value="27" Description="Canton Astro 1966"/>
+        <ExpectedValue Value="28" Description="Cape"/>
+        <ExpectedValue Value="29" Description="Cape Canaveral"/>
+        <ExpectedValue Value="30" Description="Carthage"/>
+        <ExpectedValue Value="31" Description="Chatam Island Astro 1971"/>
+        <ExpectedValue Value="32" Description="Chua Astro"/>
+        <ExpectedValue Value="33" Description="Corrego Alegre"/>
+        <ExpectedValue Value="34" Description="Dabola"/>
+        <ExpectedValue Value="35" Description="Djakarta (Batavia)"/>
+        <ExpectedValue Value="36" Description="DOS 1968"/>
+        <ExpectedValue Value="37" Description="Easter Island 1967"/>
+        <ExpectedValue Value="38" Description="European 1979"/>
+        <ExpectedValue Value="39" Description="Fort Thomas 1955"/>
+        <ExpectedValue Value="40" Description="Gan 1970"/>
+        <ExpectedValue Value="41" Description="Geodetic Datum 1949"/>
+        <ExpectedValue Value="42" Description="Graciosa Base SW 1948"/>
+        <ExpectedValue Value="43" Description="Guam 1963"/>
+        <ExpectedValue Value="44" Description="Gunung Segara"/>
+        <ExpectedValue Value="45" Description="GUX 1 Astro"/>
+        <ExpectedValue Value="46" Description="Herat North"/>
+        <ExpectedValue Value="47" Description="Hjorsey 1955"/>
+        <ExpectedValue Value="48" Description="Hong Kong 1963"/>
+        <ExpectedValue Value="49" Description="Hu-Tzu_Shan"/>
+        <ExpectedValue Value="50" Description="Indian"/>
+        <ExpectedValue Value="51" Description="Indian 1954"/>
+        <ExpectedValue Value="52" Description="Indian 1975"/>
+        <ExpectedValue Value="53" Description="Ireland 1965"/>
+        <ExpectedValue Value="54" Description="ISTS 061 Astro 1968"/>
+        <ExpectedValue Value="55" Description="ISTS 073 Astro 1969"/>
+        <ExpectedValue Value="56" Description="Johnston Island 1961"/>
+        <ExpectedValue Value="57" Description="Kandawala"/>
+        <ExpectedValue Value="58" Description="Kerguelen Island 1949"/>
+        <ExpectedValue Value="59" Description="Kertau 1948"/>
+        <ExpectedValue Value="60" Description="Kusaie Astro 1951"/>
+        <ExpectedValue Value="61" Description="L. C. 5 Astro 1961"/>
+        <ExpectedValue Value="62" Description="Leigon"/>
+        <ExpectedValue Value="63" Description="Liberia 1964"/>
+        <ExpectedValue Value="64" Description="Luzon"/>
+        <ExpectedValue Value="65" Description="Mahe 1971"/>
+        <ExpectedValue Value="66" Description="Massawa"/>
+        <ExpectedValue Value="67" Description="Merchich"/>
+        <ExpectedValue Value="68" Description="Midway Astro 1961"/>
+        <ExpectedValue Value="69" Description="Minna"/>
+        <ExpectedValue Value="70" Description="Montserrat Island Astro 1958"/>
+        <ExpectedValue Value="71" Description="M'Poraloko"/>
+        <ExpectedValue Value="72" Description="Nahrwan"/>
+        <ExpectedValue Value="73" Description="Naparima, BWI"/>
+        <ExpectedValue Value="74" Description="NAD 1927 (North American 1927)"/>
+        <ExpectedValue Value="75" Description="NAD 1983 (North American 1983)"/>
+        <ExpectedValue Value="76" Description="Observatorio Meteorologico 1939"/>
+        <ExpectedValue Value="77" Description="Old Egyptian 1907"/>
+        <ExpectedValue Value="78" Description="Old Hawaiian"/>
+        <ExpectedValue Value="79" Description="Oman"/>
+        <ExpectedValue Value="80" Description="Ordnance Surrey of Great Britain 1936"/>
+        <ExpectedValue Value="81" Description="Pico de las Nieves"/>
+        <ExpectedValue Value="82" Description="Pitcairn Astro 1967"/>
+        <ExpectedValue Value="83" Description="Point 58"/>
+        <ExpectedValue Value="84" Description="Pointe Noire 1948"/>
+        <ExpectedValue Value="85" Description="Porto Santo 1936"/>
+        <ExpectedValue Value="86" Description="Provisional South American 1956"/>
+        <ExpectedValue Value="87" Description="Provisional South Chilean 1963 (also known as Hito XVIII 1963)"/>
+        <ExpectedValue Value="88" Description="Puerto Rico"/>
+        <ExpectedValue Value="89" Description="Quatar national"/>
+        <ExpectedValue Value="90" Description="Qornoq"/>
+        <ExpectedValue Value="91" Description="Reunion"/>
+        <ExpectedValue Value="92" Description="Rome 1940"/>
+        <ExpectedValue Value="93" Description="Santo (DOS) 1965"/>
+        <ExpectedValue Value="94" Description="Sao Braz"/>
+        <ExpectedValue Value="95" Description="Sapper Hill 1943"/>
+        <ExpectedValue Value="96" Description="Scharzeck"/>
+        <ExpectedValue Value="97" Description="Selvagem Grande 1938"/>
+        <ExpectedValue Value="98" Description="South American 1969"/>
+        <ExpectedValue Value="99" Description="South Asia"/>
+        <ExpectedValue Value="100" Description="Tananarive Observatory 1925"/>
+        <ExpectedValue Value="101" Description="Timbalai 1948"/>
+        <ExpectedValue Value="102" Description="Tokyo"/>
+        <ExpectedValue Value="103" Description="Tristan Astro 1968"/>
+        <ExpectedValue Value="104" Description="Viti Levu 1916"/>
+        <ExpectedValue Value="105" Description="Wake-Eniwetok 1960"/>
+        <ExpectedValue Value="106" Description="Wake Island Astro 1952"/>
+        <ExpectedValue Value="107" Description="Yacare"/>
+        <ExpectedValue Value="108" Description="Zanderij"/>
+        <ExpectedValue Value="109" Description="American Samoa 1962"/>
+        <ExpectedValue Value="110" Description="Deception Island"/>
+        <ExpectedValue Value="111" Description="Indian 1960"/>
+        <ExpectedValue Value="112" Description="Indonesian 1974"/>
+        <ExpectedValue Value="113" Description="North Sahara 1959"/>
+        <ExpectedValue Value="114" Description="Pulkovo 1942"/>
+        <ExpectedValue Value="115" Description="S-42 (Pulkovo 1942)"/>
+        <ExpectedValue Value="116" Description="S-JYSK"/>
+        <ExpectedValue Value="117" Description="Voirol 1950"/>
+        <ExpectedValue Value="118" Description="Average Terrestial System 1977"/>
+        <ExpectedValue Value="119" Description="Compensation Geodesique du Quebec 1977"/>
+        <ExpectedValue Value="120" Description="Finnish (KKJ)"/>
+        <ExpectedValue Value="121" Description="Ordnance Survey of Ireland"/>
+        <ExpectedValue Value="122" Description="Revised Kertau"/>
+        <ExpectedValue Value="123" Description="Revised Nahrwan"/>
+        <ExpectedValue Value="124" Description="GGRS 76 (Greece)"/>
+        <ExpectedValue Value="125" Description="Nouvelle Triangulation de France"/>
+        <ExpectedValue Value="126" Description="RT 90 (Sweden)"/>
+        <ExpectedValue Value="127" Description="Geocentric Datum of Australia (FDA)"/>
+        <ExpectedValue Value="128" Description="BJZ54 (A954 Beijing Coordinates)"/>
+        <ExpectedValue Value="129" Description="Modified BJZ54"/>
+        <ExpectedValue Value="130" Description="GDZ80"/>
+        <ExpectedValue Value="131" Description="Local datum"/>
+      </ExpectedValues>
+    </AttributeClass>
+    <AttributeClass Acronym="POSACC" ID="401" Type="FLOAT" UnitType="Position" Units="m">
+      <Name>Positional accuracy</Name>
+      <Description/>
+      <References/>
+      <Remarks>The best estimate of the accuracy of a position.  Indication: Unit:defined in the PUNI subfield of the DSPM record, e.g. metre (m) Resolution:0.1m or 0.1mm  Example: 25for an error of 25 metres</Remarks>
+      <DisplayFormat>####.#</DisplayFormat>
+    </AttributeClass>
+    <AttributeClass Acronym="QUAPOS" ID="402" Type="ENUMERATION">
+      <Name>Quality of position</Name>
+      <Description/>
+      <References>INT 1: IC 1; IC 2; II 25; II 25; IB 7, 33; IC 12; II 31; II 1; II 3.1-2, 4; M-4: 310.1; 311; 410; 410; 305.1; 351.4; 411.2; 424.3;</References>
+      <Remarks>The attribute 'quality of position' indicates the accuracy   of a position.</Remarks>
+      <ExpectedValues>
+        <ExpectedValue Value="1" Description="surveyed"/>
+        <ExpectedValue Value="2" Description="unsurveyed"/>
+        <ExpectedValue Value="3" Description="inadequately surveyed"/>
+        <ExpectedValue Value="4" Description="approximate"/>
+        <ExpectedValue Value="5" Description="doubtful"/>
+        <ExpectedValue Value="6" Description="unreliable"/>
+        <ExpectedValue Value="7" Description="reported (not surveyed)"/>
+        <ExpectedValue Value="8" Description="reported (not confirmed)"/>
+        <ExpectedValue Value="9" Description="estimated"/>
+        <ExpectedValue Value="10" Description="precisely known"/>
+        <ExpectedValue Value="11" Description="calculated"/>
+        <ExpectedValue Value="701" Description="Unknown"/>
+        <ExpectedValue Value="702" Description="Multiple"/>
+        <ExpectedValue Value="703" Description="Not Applicable"/>
+        <ExpectedValue Value="704" Description="Other"/>
+      </ExpectedValues>
+    </AttributeClass>
+    <AttributeClass Acronym="subnam" ID="10020" Type="STRING">
+      <Name>Object subtitle name</Name>
+      <Description/>
+      <References/>
+      <Remarks>A secondary name for an object.  Used to supplement the name profided by OBJNAM.</Remarks>
+      <DisplayFormat>NAME (max.  80 char.)</DisplayFormat>
+    </AttributeClass>
+    <AttributeClass Acronym="surhir" ID="10022" Type="STRING">
+      <Name>Hydrographic Instruction reference ID</Name>
+      <Description/>
+      <References/>
+      <Remarks>The ID of the Hydrographic Instruction assigned to the survey project.</Remarks>
+      <DisplayFormat>NAME (max.  80 char.)</DisplayFormat>
+    </AttributeClass>
+    <AttributeClass Acronym="planam" ID="10104" Type="STRING">
+      <Name>Platform Name</Name>
+      <Description>Remarks: Platform Name.</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="objst8" ID="18690" Type="ENUMERATION">
+      <Name>Object State</Name>
+      <Description>The state of the object in the database.</Description>
+      <References/>
+      <Remarks/>
+      <ExpectedValues>
+        <ExpectedValue Value="0" Description="Offline"/>
+        <ExpectedValue Value="1" Description="Online"/>
+      </ExpectedValues>
+    </AttributeClass>
+    <AttributeClass Acronym="objdel" ID="18695" Type="ENUMERATION">
+      <Name>Object delete state</Name>
+      <Description>The object's deleted state.</Description>
+      <References/>
+      <Remarks/>
+      <ExpectedValues>
+        <ExpectedValue Value="0" Description="True"/>
+        <ExpectedValue Value="1" Description="False"/>
+        <ExpectedValue Value="2" Description="Purged"/>
+      </ExpectedValues>
+    </AttributeClass>
+    <AttributeClass Acronym="glocat" ID="20000" Type="ENUMERATION">
+      <Name>General Location</Name>
+      <Description>River. Commercial waterway requiring channel bottom monitoring.</Description>
+      <References/>
+      <Remarks/>
+      <ExpectedValues>
+        <ExpectedValue Value="0" Description="Fraser - South Arm"/>
+        <ExpectedValue Value="1" Description="Fraser - North Arm"/>
+        <ExpectedValue Value="2" Description="Fraser - Main Arm"/>
+        <ExpectedValue Value="3" Description="Fraser - Mission to Hope"/>
+        <ExpectedValue Value="4" Description="Pitt River"/>
+        <ExpectedValue Value="5" Description="Campbell River, BC"/>
+        <ExpectedValue Value="6" Description="Courtenay River, BC"/>
+        <ExpectedValue Value="7" Description="Squamish, BC"/>
+        <ExpectedValue Value="8" Description="Vancouver Harbour"/>
+        <ExpectedValue Value="9" Description="Fraser Surrey Docks"/>
+      </ExpectedValues>
+    </AttributeClass>
+    <AttributeClass Acronym="plocat" ID="20001" Type="ENUMERATION">
+      <Name>Precise Location</Name>
+      <Description>Location. Known name of a specific area or river reach that is surveyed.</Description>
+      <References/>
+      <Remarks/>
+      <ExpectedValues>
+        <ExpectedValue Value="0" Description="Annacis Channel"/>
+        <ExpectedValue Value="1" Description="Annieville Channel"/>
+        <ExpectedValue Value="2" Description="Annual (1:10000)"/>
+        <ExpectedValue Value="3" Description="Bedford Channel"/>
+        <ExpectedValue Value="4" Description="Big Bend - Queens"/>
+        <ExpectedValue Value="5" Description="Big Eddy"/>
+        <ExpectedValue Value="6" Description="Bishops Reach"/>
+        <ExpectedValue Value="7" Description="Burr Landing Channel"/>
+        <ExpectedValue Value="8" Description="Byrne Road"/>
+        <ExpectedValue Value="9" Description="Cannery Channel"/>
+        <ExpectedValue Value="10" Description="Canoe Pass"/>
+        <ExpectedValue Value="11" Description="Carey Point"/>
+        <ExpectedValue Value="12" Description="Cattermole"/>
+        <ExpectedValue Value="13" Description="Channel"/>
+        <ExpectedValue Value="14" Description="Channel Overview"/>
+        <ExpectedValue Value="15" Description="Chatham Reach"/>
+        <ExpectedValue Value="16" Description="Cheam View"/>
+        <ExpectedValue Value="17" Description="Chilliwack Rock"/>
+        <ExpectedValue Value="18" Description="City Reach"/>
+        <ExpectedValue Value="19" Description="Cowards Cove"/>
+        <ExpectedValue Value="20" Description="CPR Tunnels"/>
+        <ExpectedValue Value="21" Description="Deas Slough"/>
+        <ExpectedValue Value="22" Description="Deering Channel"/>
+        <ExpectedValue Value="23" Description="Delta Port"/>
+        <ExpectedValue Value="24" Description="Derby Reach"/>
+        <ExpectedValue Value="25" Description="Douglas Island"/>
+        <ExpectedValue Value="26" Description="Douglas Island North"/>
+        <ExpectedValue Value="27" Description="Enterprise Channel"/>
+        <ExpectedValue Value="28" Description="Essondale Channel"/>
+        <ExpectedValue Value="29" Description="First Narrows Entrance"/>
+        <ExpectedValue Value="30" Description="Fox Reach"/>
+        <ExpectedValue Value="31" Description="Grant Channel"/>
+        <ExpectedValue Value="32" Description="Gravel Reach"/>
+        <ExpectedValue Value="33" Description="Gravesend Reach"/>
+        <ExpectedValue Value="34" Description="Gundersen Slough"/>
+        <ExpectedValue Value="35" Description="Iona"/>
+        <ExpectedValue Value="36" Description="Ladner Harbour"/>
+        <ExpectedValue Value="37" Description="Ladner Reach"/>
+        <ExpectedValue Value="38" Description="Langley Bar"/>
+        <ExpectedValue Value="39" Description="Mac-Blo"/>
+        <ExpectedValue Value="40" Description="MacDonald Slough"/>
+        <ExpectedValue Value="41" Description="Mamquam Blind Channel"/>
+        <ExpectedValue Value="42" Description="Marina"/>
+        <ExpectedValue Value="43" Description="Marpole Basin"/>
+        <ExpectedValue Value="44" Description="Matsqui Island"/>
+        <ExpectedValue Value="45" Description="Mitchell Island"/>
+        <ExpectedValue Value="46" Description="Mitchell Island North"/>
+        <ExpectedValue Value="47" Description="Morey Channel"/>
+        <ExpectedValue Value="48" Description="Musqueam"/>
+        <ExpectedValue Value="49" Description="Neptune Shoal"/>
+        <ExpectedValue Value="50" Description="Parsons Channel"/>
+        <ExpectedValue Value="51" Description="Plumper Reach"/>
+        <ExpectedValue Value="52" Description="Point Grey"/>
+        <ExpectedValue Value="53" Description="Point Grey Scow Moorage"/>
+        <ExpectedValue Value="54" Description="Poplar Island"/>
+        <ExpectedValue Value="55" Description="Port Moody"/>
+        <ExpectedValue Value="56" Description="Queens Reach"/>
+        <ExpectedValue Value="57" Description="Roberts Bank"/>
+        <ExpectedValue Value="58" Description="Russel Reach"/>
+        <ExpectedValue Value="59" Description="Sand Heads Entrance"/>
+        <ExpectedValue Value="60" Description="Sand Heads Reach"/>
+        <ExpectedValue Value="61" Description="Sapperton Channel"/>
+        <ExpectedValue Value="62" Description="Sea Island"/>
+        <ExpectedValue Value="63" Description="Sea Reach"/>
+        <ExpectedValue Value="64" Description="Second Narrows Approach"/>
+        <ExpectedValue Value="65" Description="Shoal Point - New  West"/>
+        <ExpectedValue Value="66" Description="Steveston Bend"/>
+        <ExpectedValue Value="67" Description="Steveston Cut"/>
+        <ExpectedValue Value="68" Description="Swishwash Island South"/>
+        <ExpectedValue Value="69" Description="Tree Island"/>
+        <ExpectedValue Value="70" Description="Woodward Reach"/>
+      </ExpectedValues>
+    </AttributeClass>
+    <AttributeClass Acronym="km_sta" ID="20002" Type="STRING">
+      <Name>KM start</Name>
+      <Description>Remarks: Platform Name.</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="km_end" ID="20003" Type="STRING">
+      <Name>KM end</Name>
+      <Description>Remarks: Platform Name.</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="prjtyp" ID="20004" Type="ENUMERATION">
+      <Name>Project Type</Name>
+      <Description>Project type</Description>
+      <References/>
+      <Remarks/>
+      <ExpectedValues>
+        <ExpectedValue Value="0" Description="Type"/>
+        <ExpectedValue Value="1" Description="Annual"/>
+        <ExpectedValue Value="2" Description="Composite"/>
+        <ExpectedValue Value="3" Description="Construction"/>
+        <ExpectedValue Value="4" Description="Dredging"/>
+        <ExpectedValue Value="5" Description="Investigation"/>
+        <ExpectedValue Value="6" Description="Key Map"/>
+        <ExpectedValue Value="7" Description="Monitor"/>
+        <ExpectedValue Value="8" Description="Recon"/>
+        <ExpectedValue Value="9" Description="Structure"/>
+      </ExpectedValues>
+    </AttributeClass>
+    <AttributeClass Acronym="vdschm" ID="20005" Type="ENUMERATION">
+      <Name>Vertical Datum Scheme</Name>
+      <Description>Vertical Datum Scheme</Description>
+      <References/>
+      <Remarks/>
+      <ExpectedValues>
+        <ExpectedValue Value="0" Description="CHS 1996"/>
+      </ExpectedValues>
+    </AttributeClass>
+    <AttributeClass Acronym="rvrcde" ID="20006" Type="STRING">
+      <Name>River Code</Name>
+      <Description>River Code</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="chntyp" ID="20007" Type="ENUMERATION">
+      <Name>Channel Type</Name>
+      <Description>Channel Type</Description>
+      <References/>
+      <Remarks/>
+      <ExpectedValues>
+        <ExpectedValue Value="0" Description="Main"/>
+        <ExpectedValue Value="1" Description="Secondary"/>
+      </ExpectedValues>
+    </AttributeClass>
+    <AttributeClass Acronym="2k_t_a" ID="20008" Type="STRING">
+      <Name>2K_Tile_A</Name>
+      <Description>2K_Tile_A</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="2k_t_b" ID="20009" Type="STRING">
+      <Name>2K_Tile_B</Name>
+      <Description>2K_Tile_B</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="10k_ti" ID="20010" Type="STRING">
+      <Name>10K_Tile</Name>
+      <Description>10K_Tile</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="pubweb" ID="20011" Type="ENUMERATION">
+      <Name>Publish to Web</Name>
+      <Description>Publish to Web</Description>
+      <References/>
+      <Remarks/>
+      <ExpectedValues>
+        <ExpectedValue Value="0" Description="Yes"/>
+        <ExpectedValue Value="1" Description="No"/>
+      </ExpectedValues>
+    </AttributeClass>
+  </AttributeClasses>
+  <ObjectClasses/>
+</CARISDictionary>

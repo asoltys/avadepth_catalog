@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CARISDictionary Version="1">
+  <AttributeClasses>
+    <AttributeClass Acronym="srffmt" ID="10023" Type="ENUMERATION">
+      <Name>Format of bathymetric surface</Name>
+      <Description>Remarks:</Description>
+      <References/>
+      <Remarks/>
+      <ExpectedValues>
+        <ExpectedValue Value="0" Description="CARIS HIPS"/>
+      </ExpectedValues>
+    </AttributeClass>
+    <AttributeClass Acronym="srfcat" ID="10024" Type="ENUMERATION">
+      <Name>Category of bathymetric surface</Name>
+      <Description>Remarks:</Description>
+      <References/>
+      <Remarks/>
+      <ExpectedValues>
+        <ExpectedValue Value="0" Description="Standard"/>
+        <ExpectedValue Value="1" Description="Product"/>
+      </ExpectedValues>
+    </AttributeClass>
+    <AttributeClass Acronym="srfrel" ID="10025" Type="LIST">
+      <Name>Unique identifiers of related surfaces</Name>
+      <Description>Remarks:</Description>
+      <References/>
+      <Remarks/>
+      <ExpectedValues/>
+    </AttributeClass>
+    <AttributeClass Acronym="idprnt" ID="10026" Type="INTEGER">
+      <Name>Unique identifier of parent object</Name>
+      <Description>Remarks:</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="prdsrf" ID="10055" Type="INTEGER">
+      <Name>Product Surface ID.</Name>
+      <Description>Remarks: Unique identifier of the product surface for a particular profile.</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="sdruls" ID="10056" Type="STRING">
+      <Name>Supersede Decision rules</Name>
+      <Description>Remarks: An XML marked-up configuration for a set of supersede decision rules.</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="prdsca" ID="10057" Type="STRING">
+      <Name>Product Surface scaler</Name>
+      <Description>Remarks: The scaler used to create the product surface coordinate system.</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="prdcrd" ID="10058" Type="STRING">
+      <Name>Product Surface coordinate system</Name>
+      <Description>Remarks: The coordinate system used to create the product surface.</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="srfres" ID="10059" Type="FLOAT">
+      <Name>Gridded surface resolution</Name>
+      <Description>Remarks: The resolution of a gridded surface.</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="modtim" ID="10061" Type="STRING">
+      <Name>Last modified time</Name>
+      <Description>Remarks: The last modified time of an object.</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="bthrol" ID="10062" Type="LIST">
+      <Name>Bathy user role</Name>
+      <Description>Remarks: A list of roles that a Bathy user may possess. A Bathy user may possess any or all of these roles.</Description>
+      <References/>
+      <Remarks/>
+      <ExpectedValues>
+        <ExpectedValue Value="0" Description="None"/>
+        <ExpectedValue Value="1" Description="Administrator"/>
+        <ExpectedValue Value="2" Description="Browser"/>
+        <ExpectedValue Value="4" Description="Source Loader"/>
+        <ExpectedValue Value="8" Description="Source Editor"/>
+      </ExpectedValues>
+    </AttributeClass>
+    <AttributeClass Acronym="passwd" ID="10063" Type="STRING">
+      <Name>Bathy user password</Name>
+      <Description>Remarks: The encrypted password of the user.</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="cretim" ID="10064" Type="STRING">
+      <Name>Creation time</Name>
+      <Description>Remarks: The creation time of an object.</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="clpcvr" ID="10065" Type="ENUMERATION">
+      <Name>Clipping cover</Name>
+      <Description>Remarks: Determines if the generated product surface is clipped to its own cover, or simply assumes the full cover of all contained surfaces.</Description>
+      <References/>
+      <Remarks/>
+      <ExpectedValues>
+        <ExpectedValue Value="0" Description="Full"/>
+        <ExpectedValue Value="1" Description="Clipped"/>
+      </ExpectedValues>
+    </AttributeClass>
+    <AttributeClass Acronym="wantrs" ID="10066" Type="ENUMERATION">
+      <Name>Want surface resampling</Name>
+      <Description>Remarks: BASE surface generalize option: True if resampling should be done on the surface, false otherwise.</Description>
+      <References/>
+      <Remarks/>
+      <ExpectedValues>
+        <ExpectedValue Value="0" Description="False"/>
+        <ExpectedValue Value="1" Description="True"/>
+      </ExpectedValues>
+    </AttributeClass>
+    <AttributeClass Acronym="rs_res" ID="10067" Type="FLOAT">
+      <Name>Resample resolution</Name>
+      <Description>Remarks: BASE surface generalize option: The resolution at which resampling should be done on the surface.</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="wantdf" ID="10068" Type="ENUMERATION">
+      <Name>Want surface defocusing</Name>
+      <Description>Remarks: BASE surface generalize option: True if defocusing should be done on the surface, false otherwise.</Description>
+      <References/>
+      <Remarks/>
+      <ExpectedValues>
+        <ExpectedValue Value="0" Description="False"/>
+        <ExpectedValue Value="1" Description="True"/>
+      </ExpectedValues>
+    </AttributeClass>
+    <AttributeClass Acronym="wantgn" ID="10069" Type="ENUMERATION">
+      <Name>Want surface generalization</Name>
+      <Description>Remarks: BASE surface generalize option: True if generalization should be done on the surface, false otherwise.</Description>
+      <References/>
+      <Remarks/>
+      <ExpectedValues>
+        <ExpectedValue Value="0" Description="False"/>
+        <ExpectedValue Value="1" Description="True"/>
+      </ExpectedValues>
+    </AttributeClass>
+    <AttributeClass Acronym="hrzerr" ID="10070" Type="FLOAT">
+      <Name>Horizontal error</Name>
+      <Description>Remarks: BASE surface generalize option: Horizontal error.</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="mapscl" ID="10071" Type="FLOAT">
+      <Name>Map scale</Name>
+      <Description>Remarks: BASE surface generalize option: Map scale.</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="gn_rad" ID="10072" Type="FLOAT">
+      <Name>Generalization radius</Name>
+      <Description>Remarks: BASE surface generalize option: Generalization radius.</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="df_rad" ID="10073" Type="FLOAT">
+      <Name>Defocus radius</Name>
+      <Description>Remarks: BASE surface generalize option: Defocus radius.</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="sfctmb" ID="10082" Type="STRING">
+      <Name>Surface thumbnail image</Name>
+      <Description>Remarks: The Surface thumbnail image.</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="tmbres" ID="10083" Type="FLOAT">
+      <Name>Thumbnail resolution</Name>
+      <Description>Remarks: The resolution of a thumbnail image.</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="tmbclr" ID="10084" Type="STRING">
+      <Name>Surface thumbnail colour map</Name>
+      <Description>Remarks: The colour map to be used when generating a surface.</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="srftyp" ID="10085" Type="ENUMERATION">
+      <Name>Storage Type</Name>
+      <Description>The storage type of a bathymetric surface</Description>
+      <References/>
+      <Remarks/>
+      <ExpectedValues>
+        <ExpectedValue Value="0" Description="BASE Surface Grid (.hns)"/>
+        <ExpectedValue Value="1" Description="HIPS Weighted Grid (.def)"/>
+        <ExpectedValue Value="2" Description="CUBE Surface (.hcs)"/>
+        <ExpectedValue Value="3" Description="Multi-Resolution Surface (.bms)"/>
+        <ExpectedValue Value="4" Description="Point Cloud (.bps)"/>
+        <ExpectedValue Value="5" Description="BAG (.bag)"/>
+        <ExpectedValue Value="6" Description="CSAR Grid (.csar)"/>
+        <ExpectedValue Value="7" Description="CSAR Point Cloud (.csar)"/>
+      </ExpectedValues>
+    </AttributeClass>
+    <AttributeClass Acronym="poltyp" ID="10086" Type="ENUMERATION">
+      <Name>Security Policy Type</Name>
+      <Description>Remarks:</Description>
+      <References/>
+      <Remarks/>
+      <ExpectedValues>
+        <ExpectedValue Value="1" Description="Object"/>
+        <ExpectedValue Value="2" Description="Attribute"/>
+        <ExpectedValue Value="3" Description="System"/>
+      </ExpectedValues>
+    </AttributeClass>
+    <AttributeClass Acronym="poltxt" ID="10087" Type="STRING">
+      <Name>Security Policy Statement</Name>
+      <Description>Remarks:</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="polacc" ID="10088" Type="ENUMERATION">
+      <Name>Security Policy Default Access</Name>
+      <Description>Remarks:</Description>
+      <References/>
+      <Remarks/>
+      <ExpectedValues>
+        <ExpectedValue Value="1" Description="Allow"/>
+        <ExpectedValue Value="2" Description="Restrict"/>
+      </ExpectedValues>
+    </AttributeClass>
+    <AttributeClass Acronym="objtyp" ID="10089" Type="STRING">
+      <Name>Child Object Acronym</Name>
+      <Description>Remarks: This is the true catalog acronym for a Bathy category object.</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="svrver" ID="10090" Type="STRING">
+      <Name>Server version</Name>
+      <Description>Remarks: The server's version</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="dbuuid" ID="10091" Type="STRING">
+      <Name>Server's universally unique id</Name>
+      <Description>Remarks: The server's universally unique id.</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="uidcre" ID="10092" Type="STRING">
+      <Name>User id of the object's creator</Name>
+      <Description>Remarks: User id of the object's creator.</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="prddat" ID="10093" Type="STRING">
+      <Name>Product Surface Datum</Name>
+      <Description>Remarks: The datum used to create the product surface coordinate system.</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="contrb" ID="10094" Type="STRING">
+      <Name>Contribution attribute string</Name>
+      <Description>Remarks: The attributes from which to get the values to create the surface's contribution string.</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="cmpsta" ID="10095" Type="ENUMERATION">
+      <Name>Recompute statistical information</Name>
+      <Description>Remarks: Recompute statistics option: True if the statistical layers should be recomputed, false otherwise.</Description>
+      <References/>
+      <Remarks/>
+      <ExpectedValues>
+        <ExpectedValue Value="0" Description="False"/>
+        <ExpectedValue Value="1" Description="True"/>
+      </ExpectedValues>
+    </AttributeClass>
+    <AttributeClass Acronym="ambigs" ID="10096" Type="ENUMERATION">
+      <Name>Allow ambiguities</Name>
+      <Description>Remarks: Allow ambiguities: True if ambiguities are allowed during deconfliction, false otherwise.</Description>
+      <References/>
+      <Remarks/>
+      <ExpectedValues>
+        <ExpectedValue Value="0" Description="False"/>
+        <ExpectedValue Value="1" Description="True"/>
+      </ExpectedValues>
+    </AttributeClass>
+    <AttributeClass Acronym="prodat" ID="10097" Type="STRING">
+      <Name>Product Surface Attributes</Name>
+      <Description>Remarks: This is used to remember additional attributes in new generated surface..</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="elvbnd" ID="10098" Type="STRING">
+      <Name>Primary elevation band name</Name>
+      <Description>Remarks: The name for the primary elevation band name in the generated surface.</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="srfdsc" ID="10099" Type="STRING">
+      <Name>Surface Descriptor</Name>
+      <Description>Remarks: The surface band descriptor.</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="srcfil" ID="10100" Type="STRING">
+      <Name>Source file name</Name>
+      <Description>Remarks: The source file of the database object.</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="plysur" ID="10101" Type="ENUMERATION">
+      <Name>Combine using dataset boundaries</Name>
+      <Description>Remarks: When combining, use the dataset bounds: True if using the bounds, false otherwise.</Description>
+      <References/>
+      <Remarks/>
+      <ExpectedValues>
+        <ExpectedValue Value="0" Description="False"/>
+        <ExpectedValue Value="1" Description="True"/>
+      </ExpectedValues>
+    </AttributeClass>
+    <AttributeClass Acronym="hcosys" ID="10102" Type="STRING">
+      <Name>Horizontal coordinate system</Name>
+      <Description>Remarks: The horizontal coordinate system of the data.</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="vcosys" ID="10103" Type="STRING">
+      <Name>Vertical coordinate system</Name>
+      <Description>Remarks: The vertical coordinate system of the data.</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+  </AttributeClasses>
+  <ObjectClasses>
+    <ObjectClass Acronym="bathdb" ID="11002" Type="GEOGRAPHIC">
+      <Name>Bathymetric database</Name>
+    </ObjectClass>
+    <ObjectClass Acronym="survey" ID="11003" Type="GEOGRAPHIC">
+      <Name>Survey project</Name>
+    </ObjectClass>
+    <ObjectClass Acronym="surfac" ID="11004" Type="GEOGRAPHIC">
+      <Name>Bathymetric surface</Name>
+    </ObjectClass>
+    <ObjectClass Acronym="prodpf" ID="11008" Type="GEOGRAPHIC">
+      <Name>Product Profile</Name>
+    </ObjectClass>
+    <ObjectClass Acronym="dbuser" ID="11011" Type="GEOGRAPHIC">
+      <Name>Bathy Database User</Name>
+    </ObjectClass>
+    <ObjectClass Acronym="secpol" ID="11013" Type="GEOGRAPHIC">
+      <Name>Bathy Database Security Policy</Name>
+    </ObjectClass>
+  </ObjectClasses>
+</CARISDictionary>

@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile version="1.1">
+  <Attributes>
+    <Attribute value="AGENCY" subset="A"/>
+    <Attribute value="CATZOC" subset="A">
+      <PermittedValue value="1"/>
+      <PermittedValue value="2"/>
+      <PermittedValue value="3"/>
+      <PermittedValue value="4"/>
+      <PermittedValue value="5"/>
+      <PermittedValue value="6"/>
+    </Attribute>
+    <Attribute value="CPDATE" subset="A">
+      <AssociatedControl value="DateFormat"/>
+    </Attribute>
+    <Attribute value="CSCALE" subset="A"/>
+    <Attribute value="DRVAL1" subset="A"/>
+    <Attribute value="DRVAL2" subset="A"/>
+    <Attribute value="DUNITS" subset="A">
+      <PermittedValue value="1"/>
+      <PermittedValue value="2"/>
+      <PermittedValue value="3"/>
+      <PermittedValue value="4"/>
+    </Attribute>
+    <Attribute value="HUNITS" subset="A">
+      <PermittedValue value="1"/>
+      <PermittedValue value="2"/>
+    </Attribute>
+    <Attribute value="INFORM" subset="B"/>
+    <Attribute value="OBJNAM" subset="A"/>
+    <Attribute value="PICREP" subset="B"/>
+    <Attribute value="RECDAT" subset="C"/>
+    <Attribute value="RECIND" subset="C"/>
+    <Attribute value="SOUACC" subset="A"/>
+    <Attribute value="SDISMX" subset="A"/>
+    <Attribute value="SDISMN" subset="A"/>
+    <Attribute value="SORDAT" subset="C">
+      <AssociatedControl value="DateFormat"/>
+    </Attribute>
+    <Attribute value="SORIND" subset="C">
+      <AssociatedControl value="SORINDAttribute"/>
+    </Attribute>
+    <Attribute value="STATUS" subset="A">
+      <PermittedValue value="1"/>
+      <PermittedValue value="2"/>
+      <PermittedValue value="3"/>
+      <PermittedValue value="4"/>
+      <PermittedValue value="5"/>
+      <PermittedValue value="6"/>
+      <PermittedValue value="7"/>
+      <PermittedValue value="8"/>
+      <PermittedValue value="9"/>
+      <PermittedValue value="10"/>
+      <PermittedValue value="11"/>
+      <PermittedValue value="12"/>
+      <PermittedValue value="13"/>
+      <PermittedValue value="14"/>
+      <PermittedValue value="15"/>
+      <PermittedValue value="16"/>
+      <PermittedValue value="17"/>
+      <PermittedValue value="18"/>
+    </Attribute>
+    <Attribute value="SURATH" subset="A"/>
+    <Attribute value="SUREND" subset="A">
+      <AssociatedControl value="DateFormat"/>
+    </Attribute>
+    <Attribute value="SURSTA" subset="A">
+      <AssociatedControl value="DateFormat"/>
+    </Attribute>
+    <Attribute value="SURTYP" subset="A">
+      <PermittedValue value="1"/>
+      <PermittedValue value="2"/>
+      <PermittedValue value="3"/>
+      <PermittedValue value="4"/>
+      <PermittedValue value="5"/>
+      <PermittedValue value="6"/>
+    </Attribute>
+    <Attribute value="TECSOU" subset="A">
+      <PermittedValue value="1"/>
+      <PermittedValue value="2"/>
+      <PermittedValue value="3"/>
+      <PermittedValue value="4"/>
+      <PermittedValue value="5"/>
+      <PermittedValue value="6"/>
+      <PermittedValue value="7"/>
+      <PermittedValue value="8"/>
+      <PermittedValue value="9"/>
+      <PermittedValue value="10"/>
+      <PermittedValue value="11"/>
+      <PermittedValue value="12"/>
+      <PermittedValue value="13"/>
+      <PermittedValue value="14"/>
+    </Attribute>
+    <Attribute value="VERDAT" subset="A">
+      <PermittedValue value="1"/>
+      <PermittedValue value="2"/>
+      <PermittedValue value="3"/>
+      <PermittedValue value="4"/>
+      <PermittedValue value="5"/>
+      <PermittedValue value="6"/>
+      <PermittedValue value="7"/>
+      <PermittedValue value="8"/>
+      <PermittedValue value="9"/>
+      <PermittedValue value="10"/>
+      <PermittedValue value="11"/>
+      <PermittedValue value="12"/>
+      <PermittedValue value="13"/>
+      <PermittedValue value="14"/>
+      <PermittedValue value="15"/>
+      <PermittedValue value="16"/>
+      <PermittedValue value="17"/>
+      <PermittedValue value="18"/>
+      <PermittedValue value="19"/>
+      <PermittedValue value="20"/>
+      <PermittedValue value="21"/>
+      <PermittedValue value="22"/>
+      <PermittedValue value="23"/>
+      <PermittedValue value="24"/>
+      <PermittedValue value="25"/>
+      <PermittedValue value="26"/>
+      <PermittedValue value="27"/>
+      <PermittedValue value="28"/>
+      <PermittedValue value="29"/>
+      <PermittedValue value="30"/>
+    </Attribute>
+    <Attribute value="NINFOM" subset="B"/>
+    <Attribute value="HORDAT" subset="A">
+      <PermittedValue value="1"/>
+      <PermittedValue value="2"/>
+      <PermittedValue value="3"/>
+      <PermittedValue value="4"/>
+      <PermittedValue value="5"/>
+      <PermittedValue value="6"/>
+      <PermittedValue value="7"/>
+      <PermittedValue value="8"/>
+      <PermittedValue value="9"/>
+      <PermittedValue value="10"/>
+      <PermittedValue value="11"/>
+      <PermittedValue value="12"/>
+      <PermittedValue value="13"/>
+      <PermittedValue value="14"/>
+      <PermittedValue value="15"/>
+      <PermittedValue value="16"/>
+      <PermittedValue value="17"/>
+      <PermittedValue value="18"/>
+      <PermittedValue value="19"/>
+      <PermittedValue value="20"/>
+      <PermittedValue value="21"/>
+      <PermittedValue value="22"/>
+      <PermittedValue value="23"/>
+      <PermittedValue value="24"/>
+      <PermittedValue value="25"/>
+      <PermittedValue value="26"/>
+      <PermittedValue value="27"/>
+      <PermittedValue value="28"/>
+      <PermittedValue value="29"/>
+      <PermittedValue value="30"/>
+      <PermittedValue value="31"/>
+      <PermittedValue value="32"/>
+      <PermittedValue value="33"/>
+      <PermittedValue value="34"/>
+      <PermittedValue value="35"/>
+      <PermittedValue value="36"/>
+      <PermittedValue value="37"/>
+      <PermittedValue value="38"/>
+      <PermittedValue value="39"/>
+      <PermittedValue value="40"/>
+      <PermittedValue value="41"/>
+      <PermittedValue value="42"/>
+      <PermittedValue value="43"/>
+      <PermittedValue value="44"/>
+      <PermittedValue value="45"/>
+      <PermittedValue value="46"/>
+      <PermittedValue value="47"/>
+      <PermittedValue value="48"/>
+      <PermittedValue value="49"/>
+      <PermittedValue value="50"/>
+      <PermittedValue value="51"/>
+      <PermittedValue value="52"/>
+      <PermittedValue value="53"/>
+      <PermittedValue value="54"/>
+      <PermittedValue value="55"/>
+      <PermittedValue value="56"/>
+      <PermittedValue value="57"/>
+      <PermittedValue value="58"/>
+      <PermittedValue value="59"/>
+      <PermittedValue value="60"/>
+      <PermittedValue value="61"/>
+      <PermittedValue value="62"/>
+      <PermittedValue value="63"/>
+      <PermittedValue value="64"/>
+      <PermittedValue value="65"/>
+      <PermittedValue value="66"/>
+      <PermittedValue value="67"/>
+      <PermittedValue value="68"/>
+      <PermittedValue value="69"/>
+      <PermittedValue value="70"/>
+      <PermittedValue value="71"/>
+      <PermittedValue value="72"/>
+      <PermittedValue value="73"/>
+      <PermittedValue value="74"/>
+      <PermittedValue value="75"/>
+      <PermittedValue value="76"/>
+      <PermittedValue value="77"/>
+      <PermittedValue value="78"/>
+      <PermittedValue value="79"/>
+      <PermittedValue value="80"/>
+      <PermittedValue value="81"/>
+      <PermittedValue value="82"/>
+      <PermittedValue value="83"/>
+      <PermittedValue value="84"/>
+      <PermittedValue value="85"/>
+      <PermittedValue value="86"/>
+      <PermittedValue value="87"/>
+      <PermittedValue value="88"/>
+      <PermittedValue value="89"/>
+      <PermittedValue value="90"/>
+      <PermittedValue value="91"/>
+      <PermittedValue value="92"/>
+      <PermittedValue value="93"/>
+      <PermittedValue value="94"/>
+      <PermittedValue value="95"/>
+      <PermittedValue value="96"/>
+      <PermittedValue value="97"/>
+      <PermittedValue value="98"/>
+      <PermittedValue value="99"/>
+      <PermittedValue value="100"/>
+      <PermittedValue value="101"/>
+      <PermittedValue value="102"/>
+      <PermittedValue value="103"/>
+      <PermittedValue value="104"/>
+      <PermittedValue value="105"/>
+      <PermittedValue value="106"/>
+      <PermittedValue value="107"/>
+      <PermittedValue value="108"/>
+      <PermittedValue value="109"/>
+      <PermittedValue value="110"/>
+      <PermittedValue value="111"/>
+      <PermittedValue value="112"/>
+      <PermittedValue value="113"/>
+      <PermittedValue value="114"/>
+      <PermittedValue value="115"/>
+      <PermittedValue value="116"/>
+      <PermittedValue value="117"/>
+      <PermittedValue value="118"/>
+      <PermittedValue value="119"/>
+      <PermittedValue value="120"/>
+      <PermittedValue value="121"/>
+      <PermittedValue value="122"/>
+      <PermittedValue value="123"/>
+      <PermittedValue value="124"/>
+      <PermittedValue value="125"/>
+      <PermittedValue value="126"/>
+      <PermittedValue value="127"/>
+      <PermittedValue value="128"/>
+      <PermittedValue value="129"/>
+      <PermittedValue value="130"/>
+      <PermittedValue value="131"/>
+    </Attribute>
+    <Attribute value="POSACC" subset="A"/>
+    <Attribute value="QUAPOS" subset="A">
+      <PermittedValue value="1"/>
+      <PermittedValue value="2"/>
+      <PermittedValue value="3"/>
+      <PermittedValue value="4"/>
+      <PermittedValue value="5"/>
+      <PermittedValue value="6"/>
+      <PermittedValue value="7"/>
+      <PermittedValue value="8"/>
+      <PermittedValue value="9"/>
+      <PermittedValue value="10"/>
+      <PermittedValue value="11"/>
+    </Attribute>
+    <Attribute value="subnam" subset="A"/>
+    <Attribute value="surhir" subset="A"/>
+    <Attribute value="srfcat" subset="A">
+      <PermittedValue value="0"/>
+      <PermittedValue value="1"/>
+    </Attribute>
+    <Attribute value="idprnt" subset="A"/>
+    <Attribute value="srfres" subset="A"/>
+    <Attribute value="modtim" subset="A"/>
+    <Attribute value="cretim" subset="A"/>
+    <Attribute value="srftyp" subset="A">
+      <PermittedValue value="0"/>
+      <PermittedValue value="1"/>
+      <PermittedValue value="2"/>
+      <PermittedValue value="3"/>
+      <PermittedValue value="4"/>
+      <PermittedValue value="5"/>
+      <PermittedValue value="6"/>
+      <PermittedValue value="7"/>
+    </Attribute>
+    <Attribute value="uidcre" subset="A"/>
+    <Attribute value="srcfil" subset="A"/>
+    <Attribute value="hcosys" subset="A"/>
+    <Attribute value="vcosys" subset="A"/>
+    <Attribute value="planam" subset="A"/>
+    <Attribute value="objst8" subset="A">
+      <PermittedValue value="0"/>
+      <PermittedValue value="1"/>
+    </Attribute>
+    <Attribute value="objdel" subset="A">
+      <PermittedValue value="0"/>
+      <PermittedValue value="1"/>
+      <PermittedValue value="2"/>
+    </Attribute>
+    <Attribute value="glocat" subset="A">
+      <PermittedValue value="0"/>
+      <PermittedValue value="1"/>
+      <PermittedValue value="2"/>
+      <PermittedValue value="3"/>
+      <PermittedValue value="4"/>
+      <PermittedValue value="5"/>
+      <PermittedValue value="6"/>
+      <PermittedValue value="7"/>
+      <PermittedValue value="8"/>
+      <PermittedValue value="9"/>
+    </Attribute>
+    <Attribute value="plocat" subset="A">
+      <PermittedValue value="0"/>
+      <PermittedValue value="1"/>
+      <PermittedValue value="2"/>
+      <PermittedValue value="3"/>
+      <PermittedValue value="4"/>
+      <PermittedValue value="5"/>
+      <PermittedValue value="6"/>
+      <PermittedValue value="7"/>
+      <PermittedValue value="8"/>
+      <PermittedValue value="9"/>
+      <PermittedValue value="10"/>
+      <PermittedValue value="11"/>
+      <PermittedValue value="12"/>
+      <PermittedValue value="13"/>
+      <PermittedValue value="14"/>
+      <PermittedValue value="15"/>
+      <PermittedValue value="16"/>
+      <PermittedValue value="17"/>
+      <PermittedValue value="18"/>
+      <PermittedValue value="19"/>
+      <PermittedValue value="20"/>
+      <PermittedValue value="21"/>
+      <PermittedValue value="22"/>
+      <PermittedValue value="23"/>
+      <PermittedValue value="24"/>
+      <PermittedValue value="25"/>
+      <PermittedValue value="26"/>
+      <PermittedValue value="27"/>
+      <PermittedValue value="28"/>
+      <PermittedValue value="29"/>
+      <PermittedValue value="30"/>
+      <PermittedValue value="31"/>
+      <PermittedValue value="32"/>
+      <PermittedValue value="33"/>
+      <PermittedValue value="34"/>
+      <PermittedValue value="35"/>
+      <PermittedValue value="36"/>
+      <PermittedValue value="37"/>
+      <PermittedValue value="38"/>
+      <PermittedValue value="39"/>
+      <PermittedValue value="40"/>
+      <PermittedValue value="41"/>
+      <PermittedValue value="42"/>
+      <PermittedValue value="43"/>
+      <PermittedValue value="44"/>
+      <PermittedValue value="45"/>
+      <PermittedValue value="46"/>
+      <PermittedValue value="47"/>
+      <PermittedValue value="48"/>
+      <PermittedValue value="49"/>
+      <PermittedValue value="50"/>
+      <PermittedValue value="51"/>
+      <PermittedValue value="52"/>
+      <PermittedValue value="53"/>
+      <PermittedValue value="54"/>
+      <PermittedValue value="55"/>
+      <PermittedValue value="56"/>
+      <PermittedValue value="57"/>
+      <PermittedValue value="58"/>
+      <PermittedValue value="59"/>
+      <PermittedValue value="60"/>
+      <PermittedValue value="61"/>
+      <PermittedValue value="62"/>
+      <PermittedValue value="63"/>
+      <PermittedValue value="64"/>
+      <PermittedValue value="65"/>
+      <PermittedValue value="66"/>
+      <PermittedValue value="67"/>
+      <PermittedValue value="68"/>
+      <PermittedValue value="69"/>
+      <PermittedValue value="70"/>
+    </Attribute>
+    <Attribute value="km_sta" subset="A"/>
+    <Attribute value="km_end" subset="A"/>
+    <Attribute value="prjtyp" subset="A">
+      <PermittedValue value="0"/>
+      <PermittedValue value="1"/>
+    </Attribute>
+    <Attribute value="vdschm" subset="A">
+      <PermittedValue value="0"/>
+    </Attribute>
+    <Attribute value="rvrcde" subset="A"/>
+    <Attribute value="chntyp" subset="A"/>
+    <Attribute value="2k_t_a" subset="A"/>
+    <Attribute value="2k_t_b" subset="A"/>
+    <Attribute value="10k_ti" subset="A"/>
+    <Attribute value="pubweb" subset="A">
+      <PermittedValue value="0"/>
+      <PermittedValue value="1"/>
+    </Attribute>
+  </Attributes>
+  <SpatialAttributes>
+    <Global>
+      <Attribute value="POSACC"/>
+      <Attribute value="QUAPOS"/>
+    </Global>
+    <Area/>
+    <ConnectedNode/>
+    <Edge/>
+    <Point/>
+    <Sounding/>
+  </SpatialAttributes>
+  <Objects>
+    <Global>
+      <Attribute value="INFORM"/>
+      <Attribute value="RECDAT"/>
+      <Attribute value="RECIND"/>
+      <Attribute value="SORDAT">
+        <AssociatedControl value="DateFormat"/>
+      </Attribute>
+      <Attribute value="SORIND">
+        <AssociatedControl value="SORINDAttribute"/>
+      </Attribute>
+      <Attribute value="NINFOM"/>
+    </Global>
+    <Object value="survey">
+      <Relationships>
+        <Relationship entity="surfac" type="Slave"/>
+      </Relationships>
+      <Primitive value="A">
+        <Attribute value="AGENCY"/>
+        <Attribute value="cretim" read-only="yes"/>
+        <Attribute value="CSCALE"/>
+        <Attribute value="modtim" read-only="yes"/>
+        <Attribute value="objdel" read-only="yes"/>
+        <Attribute value="OBJNAM">
+          <Mandatory/>
+        </Attribute>
+        <Attribute value="objst8"/>
+        <Attribute value="SDISMN"/>
+        <Attribute value="SDISMX"/>
+        <Attribute value="STATUS"/>
+        <Attribute value="subnam"/>
+        <Attribute value="SURATH"/>
+        <Attribute value="SUREND"/>
+        <Attribute value="surhir"/>
+        <Attribute value="SURSTA"/>
+        <Attribute value="SURTYP"/>
+        <Attribute value="TECSOU"/>
+        <Attribute value="uidcre" read-only="yes"/>
+        <Attribute value="PICREP"/>
+      </Primitive>
+    </Object>
+    <Object value="surfac">
+      <Primitive value="A">
+        <Attribute value="10k_ti"/>
+        <Attribute value="2k_t_a"/>
+        <Attribute value="2k_t_b"/>
+        <Attribute value="CATZOC"/>
+        <Attribute value="chntyp"/>
+        <Attribute value="CPDATE"/>
+        <Attribute value="cretim" read-only="yes"/>
+        <Attribute value="DRVAL1"/>
+        <Attribute value="DRVAL2"/>
+        <Attribute value="DUNITS"/>
+        <Attribute value="glocat"/>
+        <Attribute value="hcosys" read-only="yes"/>
+        <Attribute value="HORDAT"/>
+        <Attribute value="HUNITS"/>
+        <Attribute value="idprnt" read-only="yes"/>
+        <Attribute value="km_end"/>
+        <Attribute value="km_sta"/>
+        <Attribute value="modtim" read-only="yes"/>
+        <Attribute value="objdel" read-only="yes"/>
+        <Attribute value="OBJNAM">
+          <Mandatory/>
+        </Attribute>
+        <Attribute value="objst8"/>
+        <Attribute value="planam"/>
+        <Attribute value="plocat"/>
+        <Attribute value="POSACC"/>
+        <Attribute value="prjtyp"/>
+        <Attribute value="pubweb"/>
+        <Attribute value="SOUACC"/>
+        <Attribute value="srcfil" read-only="yes"/>
+        <Attribute value="srfcat" read-only="yes"/>
+        <Attribute value="srfres" read-only="yes"/>
+        <Attribute value="srftyp" read-only="yes"/>
+        <Attribute value="STATUS"/>
+        <Attribute value="SUREND"/>
+        <Attribute value="SURSTA"/>
+        <Attribute value="SURTYP"/>
+        <Attribute value="TECSOU"/>
+        <Attribute value="uidcre" read-only="yes"/>
+        <Attribute value="vcosys" read-only="yes"/>
+        <Attribute value="vdschm"/>
+        <Attribute value="VERDAT"/>
+        <Attribute value="PICREP"/>
+      </Primitive>
+    </Object>
+    <Object value="prodpf">
+      <Primitive value="A">
+        <Attribute value="cretim" read-only="yes"/>
+        <Attribute value="modtim" read-only="yes"/>
+        <Attribute value="objdel" read-only="yes"/>
+        <Attribute value="OBJNAM">
+          <Mandatory/>
+        </Attribute>
+        <Attribute value="objst8"/>
+        <Attribute value="uidcre" read-only="yes"/>
+      </Primitive>
+    </Object>
+  </Objects>
+</Profile>
