@@ -316,6 +316,13 @@
       <PermittedValue value="7"/>
       <PermittedValue value="8"/>
       <PermittedValue value="9"/>
+      <PermittedValue value="10"/>
+      <PermittedValue value="11"/>
+      <PermittedValue value="12"/>
+      <PermittedValue value="13"/>
+      <PermittedValue value="14"/>
+      <PermittedValue value="15"/>
+      <PermittedValue value="16"/>
     </Attribute>
     <Attribute value="plocat" subset="A">
       <PermittedValue value="0"/>
@@ -388,26 +395,40 @@
       <PermittedValue value="67"/>
       <PermittedValue value="68"/>
       <PermittedValue value="69"/>
-      <PermittedValue value="70"/>
     </Attribute>
     <Attribute value="km_sta" subset="A"/>
     <Attribute value="km_end" subset="A"/>
     <Attribute value="prjtyp" subset="A">
       <PermittedValue value="0"/>
       <PermittedValue value="1"/>
+      <PermittedValue value="2"/>
+      <PermittedValue value="3"/>
+      <PermittedValue value="4"/>
+      <PermittedValue value="5"/>
+      <PermittedValue value="6"/>
+      <PermittedValue value="7"/>
     </Attribute>
-    <Attribute value="vdschm" subset="A">
+    <Attribute value="lwschm" subset="A">
       <PermittedValue value="0"/>
+      <PermittedValue value="1"/>
+      <PermittedValue value="2"/>
+      <PermittedValue value="3"/>
+      <PermittedValue value="4"/>
+      <PermittedValue value="5"/>
     </Attribute>
-    <Attribute value="rvrcde" subset="A"/>
-    <Attribute value="chntyp" subset="A"/>
-    <Attribute value="2k_t_a" subset="A"/>
-    <Attribute value="2k_t_b" subset="A"/>
-    <Attribute value="10k_ti" subset="A"/>
+    <Attribute value="ch_typ" subset="A">
+      <PermittedValue value="0"/>
+      <PermittedValue value="1"/>
+    </Attribute>
     <Attribute value="pubweb" subset="A">
       <PermittedValue value="0"/>
       <PermittedValue value="1"/>
     </Attribute>
+    <Attribute value="client" subset="A"/>
+    <Attribute value="sursso" subset="A"/>
+    <Attribute value="sur_id" subset="A"/>
+    <Attribute value="geodif" subset="A"/>
+    <Attribute value="planam" subset="A"/>
   </Attributes>
   <SpatialAttributes>
     <Global>
@@ -463,16 +484,15 @@
     </Object>
     <Object value="surfac">
       <Primitive value="A">
-        <Attribute value="10k_ti"/>
-        <Attribute value="2k_t_a"/>
-        <Attribute value="2k_t_b"/>
         <Attribute value="CATZOC"/>
-        <Attribute value="chntyp"/>
+        <Attribute value="ch_typ"/>
+        <Attribute value="client"/>
         <Attribute value="CPDATE"/>
         <Attribute value="cretim" read-only="yes"/>
         <Attribute value="DRVAL1"/>
         <Attribute value="DRVAL2"/>
         <Attribute value="DUNITS"/>
+        <Attribute value="geodif"/>
         <Attribute value="glocat"/>
         <Attribute value="hcosys" read-only="yes"/>
         <Attribute value="HORDAT"/>
@@ -480,6 +500,7 @@
         <Attribute value="idprnt" read-only="yes"/>
         <Attribute value="km_end"/>
         <Attribute value="km_sta"/>
+        <Attribute value="lwschm"/>
         <Attribute value="modtim" read-only="yes"/>
         <Attribute value="objdel" read-only="yes"/>
         <Attribute value="OBJNAM">
@@ -491,6 +512,8 @@
         <Attribute value="POSACC"/>
         <Attribute value="prjtyp"/>
         <Attribute value="pubweb"/>
+        <Attribute value="sur_id"/>
+        <Attribute value="sursso"/>
         <Attribute value="SOUACC"/>
         <Attribute value="srcfil" read-only="yes"/>
         <Attribute value="srfcat" read-only="yes"/>
@@ -503,7 +526,6 @@
         <Attribute value="TECSOU"/>
         <Attribute value="uidcre" read-only="yes"/>
         <Attribute value="vcosys" read-only="yes"/>
-        <Attribute value="vdschm"/>
         <Attribute value="VERDAT"/>
         <Attribute value="PICREP"/>
       </Primitive>

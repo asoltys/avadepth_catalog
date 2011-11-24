@@ -717,6 +717,12 @@
       <References/>
       <Remarks/>
     </AttributeClass>
+    <AttributeClass Acronym="sur_id" ID="20017" Type="STRING">
+      <Name>2K_Tile_A</Name>
+      <Description>Field in the AVAdepth database</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
   </AttributeClasses>
   <ObjectClasses/>
 </CARISDictionary>
