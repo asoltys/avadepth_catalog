@@ -530,7 +530,7 @@
     </AttributeClass>
     <AttributeClass Acronym="glocat" ID="20000" Type="ENUMERATION">
       <Name>General Location</Name>
-      <Description>River. Commercial waterway requiring channel bottom monitoring.</Description>
+      <Description>General Location / Waterway</Description>
       <References/>
       <Remarks/>
       <ExpectedValues>
@@ -539,101 +539,107 @@
         <ExpectedValue Value="2" Description="Fraser - Main Arm"/>
         <ExpectedValue Value="3" Description="Fraser - Mission to Hope"/>
         <ExpectedValue Value="4" Description="Pitt River"/>
-        <ExpectedValue Value="5" Description="Campbell River, BC"/>
-        <ExpectedValue Value="6" Description="Courtenay River, BC"/>
-        <ExpectedValue Value="7" Description="Squamish, BC"/>
-        <ExpectedValue Value="8" Description="Vancouver Harbour"/>
-        <ExpectedValue Value="9" Description="Fraser Surrey Docks"/>
+        <ExpectedValue Value="5" Description="Campbell River"/>
+        <ExpectedValue Value="6" Description="Courtenay River"/>
+        <ExpectedValue Value="7" Description="Mamquam Blind Channel, Squamish"/>
+        <ExpectedValue Value="8" Description="Port Metro Vancouver"/>
+        <ExpectedValue Value="9" Description="Nanaimo Harbour"/>
+        <ExpectedValue Value="10" Description="Prince Rupert"/>
+        <ExpectedValue Value="11" Description="Victoria Harbour"/>
+        <ExpectedValue Value="12" Description="Campbell River"/>
+        <ExpectedValue Value="13" Description="Courtenay River"/>
+        <ExpectedValue Value="14" Description="Queen Charlotte Island"/>
+        <ExpectedValue Value="15" Description="Tofino Harbour"/>
+        <ExpectedValue Value="16" Description="Sicamous Narrows"/>
       </ExpectedValues>
     </AttributeClass>
     <AttributeClass Acronym="plocat" ID="20001" Type="ENUMERATION">
       <Name>Precise Location</Name>
-      <Description>Location. Known name of a specific area or river reach that is surveyed.</Description>
+      <Description>Precise Location / Reach</Description>
       <References/>
       <Remarks/>
       <ExpectedValues>
         <ExpectedValue Value="0" Description="Annacis Channel"/>
         <ExpectedValue Value="1" Description="Annieville Channel"/>
-        <ExpectedValue Value="2" Description="Annual (1:10000)"/>
-        <ExpectedValue Value="3" Description="Bedford Channel"/>
-        <ExpectedValue Value="4" Description="Big Bend - Queens"/>
-        <ExpectedValue Value="5" Description="Big Eddy"/>
-        <ExpectedValue Value="6" Description="Bishops Reach"/>
-        <ExpectedValue Value="7" Description="Burr Landing Channel"/>
-        <ExpectedValue Value="8" Description="Byrne Road"/>
-        <ExpectedValue Value="9" Description="Cannery Channel"/>
-        <ExpectedValue Value="10" Description="Canoe Pass"/>
-        <ExpectedValue Value="11" Description="Carey Point"/>
-        <ExpectedValue Value="12" Description="Cattermole"/>
-        <ExpectedValue Value="13" Description="Channel"/>
-        <ExpectedValue Value="14" Description="Channel Overview"/>
-        <ExpectedValue Value="15" Description="Chatham Reach"/>
-        <ExpectedValue Value="16" Description="Cheam View"/>
-        <ExpectedValue Value="17" Description="Chilliwack Rock"/>
-        <ExpectedValue Value="18" Description="City Reach"/>
-        <ExpectedValue Value="19" Description="Cowards Cove"/>
-        <ExpectedValue Value="20" Description="CPR Tunnels"/>
-        <ExpectedValue Value="21" Description="Deas Slough"/>
-        <ExpectedValue Value="22" Description="Deering Channel"/>
-        <ExpectedValue Value="23" Description="Delta Port"/>
-        <ExpectedValue Value="24" Description="Derby Reach"/>
-        <ExpectedValue Value="25" Description="Douglas Island"/>
-        <ExpectedValue Value="26" Description="Douglas Island North"/>
-        <ExpectedValue Value="27" Description="Enterprise Channel"/>
-        <ExpectedValue Value="28" Description="Essondale Channel"/>
-        <ExpectedValue Value="29" Description="First Narrows Entrance"/>
-        <ExpectedValue Value="30" Description="Fox Reach"/>
-        <ExpectedValue Value="31" Description="Grant Channel"/>
-        <ExpectedValue Value="32" Description="Gravel Reach"/>
-        <ExpectedValue Value="33" Description="Gravesend Reach"/>
-        <ExpectedValue Value="34" Description="Gundersen Slough"/>
-        <ExpectedValue Value="35" Description="Iona"/>
-        <ExpectedValue Value="36" Description="Ladner Harbour"/>
-        <ExpectedValue Value="37" Description="Ladner Reach"/>
-        <ExpectedValue Value="38" Description="Langley Bar"/>
-        <ExpectedValue Value="39" Description="Mac-Blo"/>
-        <ExpectedValue Value="40" Description="MacDonald Slough"/>
-        <ExpectedValue Value="41" Description="Mamquam Blind Channel"/>
-        <ExpectedValue Value="42" Description="Marina"/>
-        <ExpectedValue Value="43" Description="Marpole Basin"/>
-        <ExpectedValue Value="44" Description="Matsqui Island"/>
-        <ExpectedValue Value="45" Description="Mitchell Island"/>
-        <ExpectedValue Value="46" Description="Mitchell Island North"/>
-        <ExpectedValue Value="47" Description="Morey Channel"/>
-        <ExpectedValue Value="48" Description="Musqueam"/>
-        <ExpectedValue Value="49" Description="Neptune Shoal"/>
-        <ExpectedValue Value="50" Description="Parsons Channel"/>
-        <ExpectedValue Value="51" Description="Plumper Reach"/>
-        <ExpectedValue Value="52" Description="Point Grey"/>
-        <ExpectedValue Value="53" Description="Point Grey Scow Moorage"/>
-        <ExpectedValue Value="54" Description="Poplar Island"/>
-        <ExpectedValue Value="55" Description="Port Moody"/>
-        <ExpectedValue Value="56" Description="Queens Reach"/>
-        <ExpectedValue Value="57" Description="Roberts Bank"/>
-        <ExpectedValue Value="58" Description="Russel Reach"/>
-        <ExpectedValue Value="59" Description="Sand Heads Entrance"/>
-        <ExpectedValue Value="60" Description="Sand Heads Reach"/>
-        <ExpectedValue Value="61" Description="Sapperton Channel"/>
-        <ExpectedValue Value="62" Description="Sea Island"/>
-        <ExpectedValue Value="63" Description="Sea Reach"/>
-        <ExpectedValue Value="64" Description="Second Narrows Approach"/>
-        <ExpectedValue Value="65" Description="Shoal Point - New  West"/>
-        <ExpectedValue Value="66" Description="Steveston Bend"/>
-        <ExpectedValue Value="67" Description="Steveston Cut"/>
-        <ExpectedValue Value="68" Description="Swishwash Island South"/>
-        <ExpectedValue Value="69" Description="Tree Island"/>
-        <ExpectedValue Value="70" Description="Woodward Reach"/>
+        <ExpectedValue Value="2" Description="Bedford Channel"/>
+        <ExpectedValue Value="3" Description="Big Bend - Queens"/>
+        <ExpectedValue Value="4" Description="Big Eddy"/>
+        <ExpectedValue Value="5" Description="Bishops Reach"/>
+        <ExpectedValue Value="6" Description="Burr Landing Channel"/>
+        <ExpectedValue Value="7" Description="Byrne Road"/>
+        <ExpectedValue Value="8" Description="Cannery Channel"/>
+        <ExpectedValue Value="9" Description="Canoe Pass"/>
+        <ExpectedValue Value="10" Description="Carey Point"/>
+        <ExpectedValue Value="11" Description="Cattermole"/>
+        <ExpectedValue Value="12" Description="Channel Overview"/>
+        <ExpectedValue Value="13" Description="Chatham Reach"/>
+        <ExpectedValue Value="14" Description="Cheam View"/>
+        <ExpectedValue Value="15" Description="Chilliwack Rock"/>
+        <ExpectedValue Value="16" Description="City Reach"/>
+        <ExpectedValue Value="17" Description="CPR Tunnels"/>
+        <ExpectedValue Value="18" Description="Deas Slough"/>
+        <ExpectedValue Value="19" Description="Deering Channel"/>
+        <ExpectedValue Value="20" Description="Delta Port"/>
+        <ExpectedValue Value="21" Description="Derby Reach"/>
+        <ExpectedValue Value="22" Description="Douglas Island"/>
+        <ExpectedValue Value="23" Description="Douglas Island North"/>
+        <ExpectedValue Value="24" Description="Enterprise Channel"/>
+        <ExpectedValue Value="25" Description="Essondale Channel"/>
+        <ExpectedValue Value="26" Description="First Narrows"/>
+        <ExpectedValue Value="27" Description="Fox Reach"/>
+        <ExpectedValue Value="28" Description="Fraser Surrey Docks"/>
+        <ExpectedValue Value="29" Description="Grant Channel"/>
+        <ExpectedValue Value="30" Description="Gravel Reach"/>
+        <ExpectedValue Value="31" Description="Gravesend Reach"/>
+        <ExpectedValue Value="32" Description="Gundersen Slough"/>
+        <ExpectedValue Value="33" Description="Iona"/>
+        <ExpectedValue Value="34" Description="Ladner Harbour"/>
+        <ExpectedValue Value="35" Description="Ladner Reach"/>
+        <ExpectedValue Value="36" Description="Langley Bar"/>
+        <ExpectedValue Value="37" Description="Mac-Blo"/>
+        <ExpectedValue Value="38" Description="MacDonald Slough"/>
+        <ExpectedValue Value="39" Description="Marpole Basin"/>
+        <ExpectedValue Value="40" Description="Matsqui Island"/>
+        <ExpectedValue Value="41" Description="Mitchell Island"/>
+        <ExpectedValue Value="42" Description="Mitchell Island North"/>
+        <ExpectedValue Value="43" Description="Morey Channel"/>
+        <ExpectedValue Value="44" Description="Musqueam"/>
+        <ExpectedValue Value="45" Description="Neptune Shoal"/>
+        <ExpectedValue Value="46" Description="Parsons Channel"/>
+        <ExpectedValue Value="47" Description="Plumper Reach"/>
+        <ExpectedValue Value="48" Description="Point Grey"/>
+        <ExpectedValue Value="49" Description="Point Grey Scow Moorage"/>
+        <ExpectedValue Value="50" Description="Poplar Island"/>
+        <ExpectedValue Value="51" Description="Port Moody"/>
+        <ExpectedValue Value="52" Description="Queens Reach"/>
+        <ExpectedValue Value="53" Description="Refuge 'Cowards Cove'"/>
+        <ExpectedValue Value="54" Description="Roberts Bank"/>
+        <ExpectedValue Value="55" Description="Russel Reach"/>
+        <ExpectedValue Value="56" Description="Sand Heads"/>
+        <ExpectedValue Value="57" Description="Sand Heads Reach"/>
+        <ExpectedValue Value="58" Description="Sapperton Channel"/>
+        <ExpectedValue Value="59" Description="Sea Island"/>
+        <ExpectedValue Value="60" Description="Sea Reach"/>
+        <ExpectedValue Value="61" Description="Second Narrows"/>
+        <ExpectedValue Value="62" Description="Shoal Point - New West"/>
+        <ExpectedValue Value="63" Description="Steveston Bend"/>
+        <ExpectedValue Value="64" Description="Steveston Cut"/>
+        <ExpectedValue Value="65" Description="Sturgeon Bank"/>
+        <ExpectedValue Value="66" Description="Swishwash Island South"/>
+        <ExpectedValue Value="67" Description="Tree Island"/>
+        <ExpectedValue Value="68" Description="Wagonwheel Bar"/>
+        <ExpectedValue Value="69" Description="Woodward Reach"/>
       </ExpectedValues>
     </AttributeClass>
     <AttributeClass Acronym="km_sta" ID="20002" Type="STRING">
       <Name>KM start</Name>
-      <Description>Remarks: Platform Name.</Description>
+      <Description>Start of survey in km (channel chainage)</Description>
       <References/>
       <Remarks/>
     </AttributeClass>
     <AttributeClass Acronym="km_end" ID="20003" Type="STRING">
       <Name>KM end</Name>
-      <Description>Remarks: Platform Name.</Description>
+      <Description>End of survey in km (channel chainage) </Description>
       <References/>
       <Remarks/>
     </AttributeClass>
@@ -643,34 +649,31 @@
       <References/>
       <Remarks/>
       <ExpectedValues>
-        <ExpectedValue Value="0" Description="Type"/>
-        <ExpectedValue Value="1" Description="Annual"/>
-        <ExpectedValue Value="2" Description="Composite"/>
-        <ExpectedValue Value="3" Description="Construction"/>
-        <ExpectedValue Value="4" Description="Dredging"/>
-        <ExpectedValue Value="5" Description="Investigation"/>
-        <ExpectedValue Value="6" Description="Key Map"/>
-        <ExpectedValue Value="7" Description="Monitor"/>
-        <ExpectedValue Value="8" Description="Recon"/>
-        <ExpectedValue Value="9" Description="Structure"/>
+        <ExpectedValue Value="0" Description="Annual"/>
+        <ExpectedValue Value="1" Description="Composite"/>
+        <ExpectedValue Value="2" Description="Construction"/>
+        <ExpectedValue Value="3" Description="Dredging"/>
+        <ExpectedValue Value="4" Description="Investigation"/>
+        <ExpectedValue Value="5" Description="Monitor"/>
+        <ExpectedValue Value="6" Description="Recon"/>
+        <ExpectedValue Value="7" Description="Structure"/>
       </ExpectedValues>
     </AttributeClass>
-    <AttributeClass Acronym="vdschm" ID="20005" Type="ENUMERATION">
-      <Name>Vertical Datum Scheme</Name>
-      <Description>Vertical Datum Scheme</Description>
+    <AttributeClass Acronym="lwschm" ID="20005" Type="ENUMERATION">
+      <Name>Low Water Datum Scheme</Name>
+      <Description>Low Water Datum Scheme</Description>
       <References/>
       <Remarks/>
       <ExpectedValues>
-        <ExpectedValue Value="0" Description="CHS 1996"/>
+        <ExpectedValue Value="0" Description="CHS 1978"/>
+        <ExpectedValue Value="1" Description="CHS 1997"/>
+        <ExpectedValue Value="2" Description="CHS 1991"/>
+        <ExpectedValue Value="3" Description="CHS Pre 2003"/>
+        <ExpectedValue Value="4" Description="CHS 2003"/>
+        <ExpectedValue Value="5" Description="N/A"/>
       </ExpectedValues>
     </AttributeClass>
-    <AttributeClass Acronym="rvrcde" ID="20006" Type="STRING">
-      <Name>River Code</Name>
-      <Description>River Code</Description>
-      <References/>
-      <Remarks/>
-    </AttributeClass>
-    <AttributeClass Acronym="chntyp" ID="20007" Type="ENUMERATION">
+    <AttributeClass Acronym="ch_typ" ID="20007" Type="ENUMERATION">
       <Name>Channel Type</Name>
       <Description>Channel Type</Description>
       <References/>
@@ -679,24 +682,6 @@
         <ExpectedValue Value="0" Description="Main"/>
         <ExpectedValue Value="1" Description="Secondary"/>
       </ExpectedValues>
-    </AttributeClass>
-    <AttributeClass Acronym="2k_t_a" ID="20008" Type="STRING">
-      <Name>2K_Tile_A</Name>
-      <Description>2K_Tile_A</Description>
-      <References/>
-      <Remarks/>
-    </AttributeClass>
-    <AttributeClass Acronym="2k_t_b" ID="20009" Type="STRING">
-      <Name>2K_Tile_B</Name>
-      <Description>2K_Tile_B</Description>
-      <References/>
-      <Remarks/>
-    </AttributeClass>
-    <AttributeClass Acronym="10k_ti" ID="20010" Type="STRING">
-      <Name>10K_Tile</Name>
-      <Description>10K_Tile</Description>
-      <References/>
-      <Remarks/>
     </AttributeClass>
     <AttributeClass Acronym="pubweb" ID="20011" Type="ENUMERATION">
       <Name>Publish to Web</Name>
@@ -707,6 +692,30 @@
         <ExpectedValue Value="0" Description="Yes"/>
         <ExpectedValue Value="1" Description="No"/>
       </ExpectedValues>
+    </AttributeClass>
+    <AttributeClass Acronym="client" ID="20012" Type="STRING">
+      <Name>Client</Name>
+      <Description>Owner of the data</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="sursso" ID="20013" Type="STRING">
+      <Name>PWGSC Survey Services Order No. (SSO)</Name>
+      <Description>PWGSC Survey Services Order No. (SSO)</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="geodif" ID="20015" Type="STRING">
+      <Name>Relationship of LW to CGVD28</Name>
+      <Description>Relationship of LW to CGVD28</Description>
+      <References/>
+      <Remarks/>
+    </AttributeClass>
+    <AttributeClass Acronym="planam" ID="20016" Type="STRING">
+      <Name>Platform Name (Survey Vessel)</Name>
+      <Description>Platform Name (Survey Vessel)</Description>
+      <References/>
+      <Remarks/>
     </AttributeClass>
   </AttributeClasses>
   <ObjectClasses/>
