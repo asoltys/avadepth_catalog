@@ -546,11 +546,9 @@
         <ExpectedValue Value="9" Description="Nanaimo Harbour"/>
         <ExpectedValue Value="10" Description="Prince Rupert"/>
         <ExpectedValue Value="11" Description="Victoria Harbour"/>
-        <ExpectedValue Value="12" Description="Campbell River"/>
-        <ExpectedValue Value="13" Description="Courtenay River"/>
-        <ExpectedValue Value="14" Description="Queen Charlotte Island"/>
-        <ExpectedValue Value="15" Description="Tofino Harbour"/>
-        <ExpectedValue Value="16" Description="Sicamous Narrows"/>
+        <ExpectedValue Value="12" Description="Queen Charlotte Island"/>
+        <ExpectedValue Value="13" Description="Tofino Harbour"/>
+        <ExpectedValue Value="14" Description="Sicamous Narrows"/>
       </ExpectedValues>
     </AttributeClass>
     <AttributeClass Acronym="plocat" ID="20001" Type="ENUMERATION">

@@ -321,8 +321,6 @@
       <PermittedValue value="12"/>
       <PermittedValue value="13"/>
       <PermittedValue value="14"/>
-      <PermittedValue value="15"/>
-      <PermittedValue value="16"/>
     </Attribute>
     <Attribute value="plocat" subset="A">
       <PermittedValue value="0"/>
