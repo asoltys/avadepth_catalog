@@ -692,7 +692,7 @@
       </ExpectedValues>
     </AttributeClass>
     <AttributeClass Acronym="client" ID="20012" Type="STRING">
-      <Name>Client</Name>
+      <Name>Owner of the data</Name>
       <Description>Owner of the data</Description>
       <References/>
       <Remarks/>
