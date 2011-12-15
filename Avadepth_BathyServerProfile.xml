@@ -393,19 +393,12 @@
       <PermittedValue value="67"/>
       <PermittedValue value="68"/>
       <PermittedValue value="69"/>
+      <PermittedValue value="70"/>
+      <PermittedValue value="71"/>
     </Attribute>
-    <Attribute value="km_sta" subset="A"/>
+    <Attribute value="kmstar" subset="A"/>
     <Attribute value="km_end" subset="A"/>
-    <Attribute value="prjtyp" subset="A">
-      <PermittedValue value="0"/>
-      <PermittedValue value="1"/>
-      <PermittedValue value="2"/>
-      <PermittedValue value="3"/>
-      <PermittedValue value="4"/>
-      <PermittedValue value="5"/>
-      <PermittedValue value="6"/>
-      <PermittedValue value="7"/>
-    </Attribute>
+    <Attribute value="prjtyp" subset="A"/>
     <Attribute value="lwschm" subset="A">
       <PermittedValue value="0"/>
       <PermittedValue value="1"/>
@@ -497,7 +490,7 @@
         <Attribute value="HUNITS"/>
         <Attribute value="idprnt" read-only="yes"/>
         <Attribute value="km_end"/>
-        <Attribute value="km_sta"/>
+        <Attribute value="kmstar"/>
         <Attribute value="lwschm"/>
         <Attribute value="modtim" read-only="yes"/>
         <Attribute value="objdel" read-only="yes"/>
@@ -518,6 +511,7 @@
         <Attribute value="srfres" read-only="yes"/>
         <Attribute value="srftyp" read-only="yes"/>
         <Attribute value="STATUS"/>
+        <Attribute value="SURATH"/>
         <Attribute value="SUREND"/>
         <Attribute value="SURSTA"/>
         <Attribute value="SURTYP"/>
